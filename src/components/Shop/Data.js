@@ -47,6 +47,38 @@ const data = [
     info: "loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
     price: "82",
   },
+  {
+    id: "07",
+    img: "./assest/imgs/Guitar.jpg",
+    alt: "Guitar",
+    name: "Guitar",
+    info: "loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
+    price: "40",
+  },
+  {
+    id: "08",
+    img: "./assest/imgs/Blue-Guitar.jpg",
+    alt: "Blue Guitar",
+    name: "Blue-Guitar",
+    info: "loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
+    price: "240",
+  },
+  {
+    id: "09",
+    img: "./assest/imgs/Microphone.jpg",
+    alt: "Microphone",
+    name: "Microphone",
+    info: "loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
+    price: "20",
+  },
+  {
+    id: "10",
+    img: "./assest/imgs/Headphones.jpg",
+    alt:"Headphones",
+    name: "Headphones",
+    info: "loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
+    price: "10",
+  },
 ];
 
 export default data;

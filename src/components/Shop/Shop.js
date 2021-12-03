@@ -6,6 +6,7 @@ import "./Shop.css";
 
 const Shop = () => {
   return (
+    
     <div className="showProduct">
       {data.map((item, id) => (
         <Product
