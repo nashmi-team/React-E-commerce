@@ -1,9 +1,8 @@
 import "./App.css";
-
+// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Shop from "./components/Shop/Shop";
 const App = () => {
-  // All State
-  // first
-  return <div className="App">Hello Team</div>;
+  return <Shop />;
 };
 
 export default App;

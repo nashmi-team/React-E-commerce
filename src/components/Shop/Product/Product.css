@@ -1,0 +1,16 @@
+.productCard {
+  width: 70%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+}
+.productCard > img {
+  width: 100%;
+}
+.productCard > h3,
+.price {
+  text-align: center;
+  font-weight: bold;
+}
+.add_to_cart {
+  width: 100%;
+}
