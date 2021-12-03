@@ -6,6 +6,7 @@ import { CartProvider } from "react-use-cart";
 import Shop from "./components/Shop/Shop";
 import Cart from "./components/Cart/Cart";
 import Home from "./components/Home/Home";
+import SingleProduct from "./components/SingleProduc/SingleProduct";
 const App = () => {
   // All State
   return (
@@ -19,6 +20,9 @@ const App = () => {
             </Route>
             <Route path="/shop">
               <Shop />
+            </Route>
+            <Route path="/Product/:id">
+            <SingleProduct />
             </Route>
           </Switch>
         </CartProvider>

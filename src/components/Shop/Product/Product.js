@@ -1,10 +1,14 @@
 import React from "react";
 import "./Product.css";
 import { useCart } from "react-use-cart";
+import { Link } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+
 const Product = (props) => {
   const { addItem } = useCart();
 
   return (
+    <Link to={`/Product/${props.id}`}>
     <div className="productCard">
       <img src={props.src} alt={props.alt} />
       <h3>{props.productName}</h3>
@@ -14,6 +18,8 @@ const Product = (props) => {
         Add To Cart
       </button>
     </div>
+    </Link>
+    
   );
 };
 export default Product;
