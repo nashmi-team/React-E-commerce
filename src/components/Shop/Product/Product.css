@@ -13,4 +13,5 @@
 }
 .add_to_cart {
   width: 100%;
+  cursor: pointer;
 }

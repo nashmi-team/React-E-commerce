@@ -1,0 +1,39 @@
+.custom-navbar {
+  /*box-shadow: 10px 10px 10px #943030;*/
+  z-index: 1;
+  background-color: #000 !important;
+}
+
+.nav-link {
+  color: #fff !important;
+}
+
+.nav-link:hover {
+  color: #007bff !important;
+  cursor: pointer;
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: #007bff;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  width: 18px !important;
+}
+
+.custom-toggler:hover {
+  border-color: #fff;
+  background-color: #007bff;
+}
+
+#logo_custom {
+  /*margin-top: -6px;*/
+  width: 3rem;
+}
+
+.nav-item {
+  /*padding: 0.5rem 1rem;*/
+  margin-left: 3rem;
+  font-size: 1.2rem;
+  font-family: "Montserrat", sans-serif;
+}

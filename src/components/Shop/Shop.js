@@ -11,7 +11,7 @@ const Shop = () => {
           src={item.img}
           alt={item.alt}
           productName={item.name}
-          productInfo={item.name}
+          productInfo={item.info}
           price={item.price}
           item={item}
           key={id}

@@ -1,6 +1,6 @@
 .showProduct {
   width: 80%;
-  margin: 0% auto;
+  margin: 10% auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
