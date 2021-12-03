@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Signup from "./components/registerationforms/Signup";
 import Login from "./components/registerationforms/Login";
 import Fakepage from "./components/registerationforms/Fakepage";
+import NavBar from "./components/NavBar/NavBar";
 
 const App = () => {
   // All State
@@ -22,6 +23,7 @@ const App = () => {
   });
   return (
     <Router>
+      <NavBar />
       <Switch>
         <Route exact path="/">
           <div className="register-style">
