@@ -27,7 +27,7 @@ const Links = [
 const Navbar = () => {
 
     return (
-        <nav className="navbar fixed-top navbar-expand-md custom-navbar ">
+        <nav className="navbar fixed-top navbar-expand-md bg-dark custom-navbar ">
             <img className="navbar-brand ml-3" id="logo_custom" src={logo} alt="logo" />
                 <button className="navbar-toggler navbar-toggler-right custom-toggler" type="button"
                         data-toggle="collapse" data-target="#collapsibleNavbar">
