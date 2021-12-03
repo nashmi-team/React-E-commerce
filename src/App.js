@@ -1,8 +1,18 @@
 import "./App.css";
+import NavBar from "./components/NavBar/NavBar";
+import {BrowserRouter} from "react-router-dom";
+import Header from "./components/Header/Header";
 
 const App = () => {
   // All State
-  return <div className="App"></div>;
+  return (
+  <>
+    <BrowserRouter>
+    <NavBar />
+    <Header />
+    </BrowserRouter>
+  </>
+  );
 };
 
 export default App;
