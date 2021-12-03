@@ -1,4 +1,5 @@
 import React from "react";
+import SingleProduct from "../SingleProduc/SingleProduct";
 import data from "./Data";
 import Product from "./Product/Product";
 import "./Shop.css";
@@ -15,6 +16,7 @@ const Shop = () => {
           price={item.price}
           item={item}
           key={id}
+          id={item.id}
         />
       ))}
     </div>
