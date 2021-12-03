@@ -45,6 +45,7 @@ const Cart = () => {
                                 <td>Otto</td>
                                 <td>@mdo</td>
                                 <td>
+                                    
                                     {/*<button className="btn btn-success">+</button>*/}
                                     <input type="number" className="form-control "/>
                                     {/*<button className="btn btn-danger">-</button>*/}
