@@ -2,9 +2,9 @@ import "./App.css";
 import React, { useState } from "react";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from "./components/Home/Home";
 import Signup from "./components/registerationforms/Signup";
 import Login from "./components/registerationforms/Login";
-import Fakepage from "./components/registerationforms/Fakepage";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 const App = () => {
@@ -40,8 +40,8 @@ const App = () => {
             />
           </div>
         </Route>
-        <Route path="/fakepage">
-          <Fakepage />
+        <Route path="/home">
+          <Home />
         </Route>
       </Switch>
 

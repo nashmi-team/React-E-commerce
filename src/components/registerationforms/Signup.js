@@ -49,7 +49,7 @@ function Signup({
       localStorage.setItem("user", JSON.stringify(updatedData));
 
       history.push({
-        pathname: `/fakepage`,
+        pathname: `/home`,
       });
       setSubmitted(true);
     }
