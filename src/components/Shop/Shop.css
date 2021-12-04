@@ -3,6 +3,16 @@
   margin: 1% auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: minmax(100px, 1fr);
+}
+
+@media only screen and (min-width: 280px) and (max-width: 750px) {
+  .showProduct {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin: 25% auto;
+  }
 }
 
 

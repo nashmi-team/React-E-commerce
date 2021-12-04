@@ -1,0 +1,10 @@
+.slider-img {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+  align-items: center;
+}
+.slider-img > img {
+  width: 60%;
+}

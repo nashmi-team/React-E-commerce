@@ -99,7 +99,7 @@ const Cart = () => {
                   })}
                   <tr>
                     <td colSpan="4">
-                      <h3>Total:{cartTotal}</h3>
+                      <h3>Total: {cartTotal} JD</h3>
                     </td>
                     <td colSpan="2">
                       <button
