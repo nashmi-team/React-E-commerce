@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { useCart } from "react-use-cart";
 import { withRouter } from "react-router";
 import data from "../Data";
@@ -8,20 +7,25 @@ const SingleProduct = (props) => {
   const productId = props.match.params.id;
   const { addItem } = useCart();
   return (
-    <div className="product-container">
-      {data.map((data) => {
+    <>
+      {data.map((data, id) => {
         if (data.id === productId) {
           return (
-            <>
-              <img src={`.${data.img}`} />
+            <div className="product-container" key={id}>
+              <img src={data.img} alt={data.alt} />
               <h1>{data.name}</h1>
               <h2> Price {data.price} JD</h2>
               <p>{data.info}</p>
-            </>
+              <button className="add_to_cart " onClick={() => addItem(data)}>
+                Add To Cart
+              </button>
+            </div>
           );
+        } else {
+          return null;
         }
       })}
-    </div>
+    </>
   );
 };
 export default withRouter(SingleProduct);
