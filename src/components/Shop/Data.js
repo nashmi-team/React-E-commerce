@@ -74,7 +74,7 @@ const data = [
   {
     id: "10",
     img: "./assest/imgs/Headphones.jpg",
-    alt:"Headphones",
+    alt: "Headphones",
     name: "Headphones",
     info: "loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
     price: "10",
@@ -82,7 +82,7 @@ const data = [
   {
     id: "11",
     img: "./assest/imgs/Harp.jpg",
-    alt:"Harp",
+    alt: "Harp",
     name: "Harp",
     info: "loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
     price: "100",

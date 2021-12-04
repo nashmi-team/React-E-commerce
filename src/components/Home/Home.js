@@ -1,12 +1,19 @@
 import React from "react";
-import { Navbar } from "react-bootstrap";
+
+import ProductSlider from "../ProductSlider/ProductSlider";
+import { Reviews } from "../Reviews/Reviews";
+import YouTube from "../Youtube/Youtube";
 import Header from "../Header/Header";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Header />
-    </div>
+      <ProductSlider />
+      <YouTube />
+      <Reviews />
+    </>
   );
 };
+
 export default Home;

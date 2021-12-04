@@ -1,0 +1,14 @@
+.register-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10em auto;
+}
+
+@media (max-width: 480px) {
+  .register-style {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
