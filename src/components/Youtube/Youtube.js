@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import "./youtube.css";
 const API = "AIzaSyDX5oU9Xh_874GiuyG1deSdq2ogQ3QLR0s";
 const channelId = "UCVk8weS4S2kJfja72fTxh5A";
-const maxResults = 10;
+const maxResults = 1;
 const finalUrl = `https://www.googleapis.com/youtube/v3/search?key=${API}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxResults}`;
 // const finalUrl = `https://youtube.googleapis.com/youtube/v3/playlists?channelId=${channelId}&maxResults=${maxResults}&key=${API}`;
 // https://youtube.googleapis.com/youtube/v3/playlists?channelId=UCVk8weS4S2kJfja72fTxh5A&maxResults=10&key=AIzaSyDIIxAoo1kzmw0N4kXr8srjX6S6ElNW9bY
