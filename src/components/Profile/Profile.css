@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+  font-family: sans-serif;
+}
+
+.weatherInfo {
+  background-color: silver;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-align: center;
+}
+
+.userInfo :first-child {
+  margin-bottom: 0;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+  margin-top: 0;
+}
+
+li {
+  font-size: 1.1em;
+}
+
+.city {
+  font-size: 1.2em;
+}
+
+sup {
+  font-size: 0.6em;
+}
+
+.temp {
+  font-size: 1.6em;
+  font-weight: 600;
+}
+
+.icon {
+  width: 3.7em;
+  height: 2.8em;
+}
+
+.holder {
+  display: flex;
+  flex-direction: column;
+  margin: 1em 1em;
+}
+
+.holder-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.4em;
+}
+
+.container {
+  padding: 0;
+}
+
+@media all and (max-width: 270px) {
+  html {
+    font-size: 8vw;
+  }
+}
+
+@media all and (max-width: 760px) {
+  .holder-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .weatherInfo {
+    max-width: 8em;
+  }
+}
