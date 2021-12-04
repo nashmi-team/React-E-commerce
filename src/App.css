@@ -4,6 +4,7 @@
   justify-content: space-around;
   margin: 10em auto;
 }
+
 @media (max-width: 480px) {
   .register-style {
     display: flex;

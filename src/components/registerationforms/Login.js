@@ -27,7 +27,11 @@ function Login({
       : [];
 
     if (
-      loginUpdatedData.some((c) => c.email === userLoginInformation.loginEmail)
+      loginUpdatedData.some(
+        (c) =>
+          c.email === userLoginInformation.loginEmail &&
+          c.password === userLoginInformation.loginPassword
+      )
     ) {
       console.log("loginaccepted");
       //   this.props.history.push({
@@ -40,26 +44,33 @@ function Login({
   return (
     <div className="login">
       <form onSubmit={handleLoginSubmit} className="login-form">
-        <span className="login-title">Login</span>
-        <label>Email</label>
-        <input
-          name="loginEmail"
-          type="email"
-          value={userLoginInformation.loginEmail}
-          onChange={handleonChange}
-          placeholder="enter your email"
-          required
-        />
-        <label>password</label>
-        <input
-          name="loginPassword"
-          type="password"
-          value={userLoginInformation.loginPassword}
-          onChange={handleonChange}
-          placeholder="enetr your password"
-          required
-        />
-        <button className="login-btn">submit</button>
+        <fieldset>
+          <legend>Login</legend>
+
+          <label>
+            Email
+            <input
+              name="loginEmail"
+              type="email"
+              value={userLoginInformation.loginEmail}
+              onChange={handleonChange}
+              placeholder="enter your email"
+              required
+            />
+          </label>
+          <label>
+            password
+            <input
+              name="loginPassword"
+              type="password"
+              value={userLoginInformation.loginPassword}
+              onChange={handleonChange}
+              placeholder="enetr your password"
+              required
+            />
+          </label>
+          <button className="login-btn">submit</button>
+        </fieldset>
       </form>
     </div>
   );
