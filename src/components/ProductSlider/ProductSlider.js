@@ -18,9 +18,9 @@ const ProductSlider = () => {
         <span>Featured Products</span>
       </h1>
       <Carousel breakPoints={breakPoints} isRTL className="container">
-        {data.map((data) => {
+        {data.map((data,index) => {
           return (
-            <Item>
+            <Item key={index}>
               <div className="slider-img">
                 <img src={data.img} alt={data.alt} />
                 <h3>{data.name}</h3>
