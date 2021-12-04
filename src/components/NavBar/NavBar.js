@@ -30,7 +30,7 @@ const Links = [
 
 const Navbar = () => {
   return (
-    <nav className="navbar fixed-top navbar-expand-md custom-navbar ">
+    <nav className="navbar fixed-top navbar-expand-md bg-dark custom-navbar ">
       <img
         className="navbar-brand ml-3"
         id="logo_custom"
@@ -46,7 +46,7 @@ const Navbar = () => {
         <i className="fa-solid fa-bars"></i>
       </button>
       <div className="collapse navbar-collapse " id="collapsibleNavbar">
-        <ul className="navbar-nav  justify-content-between">
+        <ul className="navbar-nav">
           {Links.map((link, index) => {
             return (
               <li className="nav-item" key={index}>
