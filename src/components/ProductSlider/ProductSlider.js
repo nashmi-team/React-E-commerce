@@ -17,7 +17,7 @@ const ProductSlider = ()  =>{
       <h1 style={{ textAlign: "center" }}>
         <span>Featured Products</span>
       </h1>
-      <Carousel breakPoints={breakPoints}>
+      <Carousel breakPoints={breakPoints} isRTL className="container">
         <Item>
           <img src={logo} alt="" />
         </Item>
