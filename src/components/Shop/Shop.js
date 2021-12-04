@@ -6,7 +6,16 @@ import "./Shop.css";
 
 const Shop = () => {
   return (
-    
+    <div>
+    <form>
+          <select id="rating-filter">
+            <option >Sort</option>
+            <option>Low rating</option>
+            <option>High rating</option>
+          
+          </select>
+          <input type="submit" value="Filter"/>
+        </form>
     <div className="showProduct">
       {data.map((item, id) => (
         <Product
@@ -20,9 +29,8 @@ const Shop = () => {
           id={item.id}
         />
       ))}
-      <SingleProduct />
     </div>
-    
+    </div>
   );
 };
 export default Shop;

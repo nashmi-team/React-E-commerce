@@ -79,6 +79,14 @@ const data = [
     info: "loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
     price: "10",
   },
+  {
+    id: "11",
+    img: "./assest/imgs/Harp.jpg",
+    alt:"Harp",
+    name: "Harp",
+    info: "loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
+    price: "100",
+  },
 ];
 
 export default data;

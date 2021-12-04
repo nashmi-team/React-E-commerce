@@ -12,7 +12,7 @@ const Product = (props) => {
     <div className="productCard">
       <img src={props.src} alt={props.alt} />
       <h3>{props.productName}</h3>
-      <p className="info">{props.productInfo}</p>
+      {/* <p className="info">{props.productInfo}</p> */}
       <p className="price">{props.price} JD</p>
       <div className="btn">
       <button className="view-product">
