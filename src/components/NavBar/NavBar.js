@@ -46,7 +46,7 @@ const Navbar = () => {
         <i className="fa-solid fa-bars"></i>
       </button>
       <div className="collapse navbar-collapse " id="collapsibleNavbar">
-        <ul className="navbar-nav ">
+        <ul className="navbar-nav">
           {Links.map((link, index) => {
             return (
               <li className="nav-item" key={index}>
