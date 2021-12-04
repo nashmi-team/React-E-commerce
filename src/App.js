@@ -4,12 +4,13 @@ import React, { useState, useEffect } from "react";
 import { CartProvider } from "react-use-cart";
 import Profile from "./components/Profile/Profile";
 import Shop from "./components/Shop/Shop";
-import SingleProduct from "./components/SingleProduc/SingleProduct";
+
 import Home from "./components/Home/Home";
 import Signup from "./components/registerationforms/Signup";
 import Login from "./components/registerationforms/Login";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
+import SingleProduct from "./components/Shop/SingleProduc/SingleProduct";
 
 const App = () => {
   // All State
