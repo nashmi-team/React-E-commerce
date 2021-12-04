@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
-// import Button from 'react-bootstrap/Button'
 import "./cart.css";
 import { Table } from "react-bootstrap";
 import { useCart } from "react-use-cart";
@@ -8,7 +7,6 @@ import { useCart } from "react-use-cart";
 const Cart = () => {
   const {
     isEmpty,
-    totalUniqueItems,
     totalItems,
     cartTotal,
     updateItemQuantity,

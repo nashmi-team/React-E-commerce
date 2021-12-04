@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/Logo.png";
 import "./NavBar.css";
 import Cart from "../Cart/Cart";
-import { CartProvider } from "react-use-cart";
 
 const Links = [
   {
@@ -19,10 +18,13 @@ const Links = [
     link: "/contact",
   },
   { name: "Shop", link: "/shop" },
-  
   {
     name: "Login",
     link: "/registeration",
+  },
+  {
+    name: "My Account",
+    link: "/dataWeather",
   },
 ];
 
@@ -41,7 +43,7 @@ const Navbar = () => {
         data-toggle="collapse"
         data-target="#collapsibleNavbar"
       >
-        <span className="navbar-toggler-icon " />
+        <i className="fa-solid fa-bars"></i>
       </button>
       <div className="collapse navbar-collapse " id="collapsibleNavbar">
         <ul className="navbar-nav  justify-content-between">

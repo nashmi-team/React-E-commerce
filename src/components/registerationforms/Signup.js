@@ -49,7 +49,7 @@ function Signup({
       localStorage.setItem("user", JSON.stringify(updatedData));
 
       history.push({
-        pathname: `/`,
+        pathname: `/shop`,
       });
       setSubmitted(true);
     }
@@ -85,7 +85,7 @@ function Signup({
               required
             />
           </label>
-          {userSignupInformation.email == "" ? (
+          {userSignupInformation.email === "" ? (
             <span style={{ color: "red" }}>please enter your email </span>
           ) : null}
           <label htmlFor="passowrd">
@@ -103,7 +103,7 @@ function Signup({
           </label>
 
           {userSignupInformation.password.length < 6 &&
-          userSignupInformation.password == "" ? (
+          userSignupInformation.password === "" ? (
             <span style={{ color: "red" }}>not correct password </span>
           ) : null}
           <label htmlFor="r.password">
