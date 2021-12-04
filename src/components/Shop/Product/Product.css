@@ -72,5 +72,6 @@
 @media only screen and (min-width: 360px) and (max-width: 750px) {
   .productCard {
     font-size: 0.7em;
+    justify-self: center;
   }
 }

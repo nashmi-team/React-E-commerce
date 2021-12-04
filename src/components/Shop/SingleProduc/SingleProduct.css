@@ -1,0 +1,9 @@
+.product-container {
+  width: 80%;
+  margin: 5rem;
+  display: flex;
+  flex-direction: row;
+}
+.product-container > img {
+  width: 30%;
+}

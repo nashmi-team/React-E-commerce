@@ -1,5 +1,4 @@
 import React from "react";
-import SingleProduct from "../SingleProduc/SingleProduct";
 import data from "./Data";
 import Product from "./Product/Product";
 import "./Shop.css";
