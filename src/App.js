@@ -52,7 +52,7 @@ const App = () => {
           <Route path="/shop">
             <Shop />
           </Route>
-          <Route exact path="/Product/:id" children={<Shop />}>
+          <Route exact path="/Product/:id">
             <SingleProduct />
           </Route>
         </Switch>
