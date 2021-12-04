@@ -3,7 +3,6 @@ import { CartProvider } from "react-use-cart";
 import Shop from "./components/Shop/Shop";
 import SingleProduct from "./components/SingleProduc/SingleProduct";
 import React, { useState } from "react";
-
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/Home/Home";
 import Signup from "./components/registerationforms/Signup";

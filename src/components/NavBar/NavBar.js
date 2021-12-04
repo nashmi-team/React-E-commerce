@@ -19,7 +19,7 @@ const Links = [
     link: "/contact",
   },
   { name: "Shop", link: "/shop" },
-  
+
   {
     name: "Login",
     link: "/registeration",
@@ -41,7 +41,7 @@ const Navbar = () => {
         data-toggle="collapse"
         data-target="#collapsibleNavbar"
       >
-        <span className="navbar-toggler-icon " />
+        <i class="fa-solid fa-bars"></i>
       </button>
       <div className="collapse navbar-collapse " id="collapsibleNavbar">
         <ul className="navbar-nav  justify-content-between">

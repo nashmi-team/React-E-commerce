@@ -21,10 +21,13 @@
 .custom-toggler .navbar-toggler-icon {
   width: 18px !important;
 }
+.fa-solid {
+  color: white;
+}
 
 .custom-toggler:hover {
   border-color: #fff;
-  background-color: #007bff;
+  background-color: rgb(109, 109, 109);
 }
 
 #logo_custom {
