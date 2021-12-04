@@ -7,17 +7,20 @@ const Product = (props) => {
   const { addItem } = useCart();
 
   return (
-    <Link to={"/product/" + props.id}>
-      <div className="productCard">
-        <img src={props.src} alt={props.alt} />
-        <h3>{props.productName}</h3>
-        <p>{props.productInfo}</p>
-        <p className="price">{props.price} JD</p>
+    <div className="productCard">
+      <img src={props.src} alt={props.alt} />
+      <h3>{props.productName}</h3>
+      {/* <p className="info">{props.productInfo}</p> */}
+      <p className="price">{props.price} JD</p>
+      <div className="btn-view">
+        <button className="view-product">
+          <Link to={`/Product/${props.id}`}>View</Link>
+        </button>
         <button className="add_to_cart" onClick={() => addItem(props.item)}>
           Add To Cart
         </button>
       </div>
-    </Link>
+    </div>
   );
 };
 export default Product;

@@ -1,13 +1,17 @@
-// import React from "react";
-// import { useCart } from "react-use-cart";
-import { withRouter } from "react-router-dom";
+import React from "react";
+import { useCart } from "react-use-cart";
+import { withRouter } from "react-router";
+import "./SingleProduct.css";
 
 const SingleProduct = (props) => {
-  // const { addItem } = useCart();
+  const { addItem } = useCart();
+
+  console.log(props);
   return (
-    <div>
-      <h1> {props.match.params.id}</h1>
-      <img src={props.match.params.src} />
+    <div className="product-container">
+      <img src={props.match.params.src} alt={props.match.params.alt} />
+      <h1>Hello {props.match.params.id}</h1>
+      <h2> Price {props.match.params.price}</h2>
     </div>
   );
 };

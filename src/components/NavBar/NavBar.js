@@ -18,11 +18,12 @@ const Links = [
     name: "Contact",
     link: "/contact",
   },
+  { name: "Shop", link: "/shop" },
+  
   {
     name: "Login",
-    link: "/login",
+    link: "/registeration",
   },
-  { name: "Shop", link: "/shop" },
 ];
 
 const Navbar = () => {
