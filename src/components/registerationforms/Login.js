@@ -1,10 +1,12 @@
 import React from "react";
+import { withRouter } from "react-router";
 import "./registeration.css";
 function Login({
   loginEmail,
   loginPassword,
   userLoginInformation,
   setUserLoginInformation,
+  history,
 }) {
   const handleonChange = (e) => {
     const { name, value } = e.target;
@@ -33,10 +35,9 @@ function Login({
           c.password === userLoginInformation.loginPassword
       )
     ) {
-      console.log("loginaccepted");
-      //   this.props.history.push({
-      //     pathname: `/share`,
-      //   });
+      history.push({
+        pathname: `/`,
+      });
     } else {
       alert("incorrect email ");
     }
@@ -76,4 +77,4 @@ function Login({
   );
 }
 
-export default Login;
+export default withRouter(Login);

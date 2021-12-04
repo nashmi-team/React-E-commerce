@@ -26,7 +26,7 @@ const App = () => {
       <NavBar />
 
       <Switch>
-        <Route exact path="/">
+        <Route path="/registeration">
           <div className="register-style">
             <Signup
               setUserSignupInformation={setUserSignupInformation}
@@ -40,7 +40,7 @@ const App = () => {
             />
           </div>
         </Route>
-        <Route path="/home">
+        <Route exact path="/">
           <Home />
         </Route>
       </Switch>
