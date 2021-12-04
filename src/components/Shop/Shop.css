@@ -1,0 +1,43 @@
+.showProduct {
+  width: 80%;
+  margin: 1% auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+form {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+input[type="submit"] {
+  border: none;
+  background:orangered;
+  color:white;
+  margin-left:15px;
+  border-radius: 3px;
+  padding: 0 15px;
+  cursor: pointer;
+}
+#rating-filter {
+  color: white;
+  padding: 5px;
+  background: orangered;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width:1000px){
+  .showProduct{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media screen and (max-width:720px){
+  .showProduct{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

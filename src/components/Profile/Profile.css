@@ -65,7 +65,7 @@ sup {
 
 .holder-info {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 1.4em;
 }
 
@@ -81,8 +81,7 @@ sup {
 
 @media all and (max-width: 760px) {
   .holder-info {
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: space-between;
   }
 
   .weatherInfo {
