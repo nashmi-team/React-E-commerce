@@ -1,12 +1,15 @@
 import React from "react";
 import { withRouter } from "react-router";
 import "./registeration.css";
+
 function Login({
   loginEmail,
   loginPassword,
   userLoginInformation,
   setUserLoginInformation,
   history,
+  setLogged,
+  logged,
 }) {
   const handleonChange = (e) => {
     const { name, value } = e.target;
@@ -38,10 +41,12 @@ function Login({
       history.push({
         pathname: `/shop`,
       });
+      setLogged(!logged);
     } else {
       alert("incorrect email ");
     }
   };
+
   return (
     <div className="login">
       <form onSubmit={handleLoginSubmit} className="login-form">

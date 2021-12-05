@@ -13,7 +13,7 @@ import Footer from "./components/Footer/Footer";
 
 const App = () => {
   // All State
-
+  const [updatedData, setUpdatedData] = useState({ items: "" });
   const [userSignupInformation, setUserSignupInformation] = useState({
     username: "",
     email: "",
@@ -27,6 +27,7 @@ const App = () => {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [logged, setLogged] = useState(false);
 
   // Weather Data & State
   const [dataWeather, setDataWeather] = useState({});
@@ -46,6 +47,12 @@ const App = () => {
   };
   useEffect(() => get(), []);
 
+  const local = () => {
+    const localData = JSON.parse(localStorage.getItem("react-use-cart"));
+    setUpdatedData({ items: localData.items });
+  };
+  useEffect(() => local(), []);
+
   return (
     <Router>
       <CartProvider>
@@ -62,6 +69,8 @@ const App = () => {
               <Login
                 userLoginInformation={userLoginInformation}
                 setUserLoginInformation={setUserLoginInformation}
+                logged={logged}
+                setLogged={setLogged}
               />
             </div>
           </Route>
@@ -72,7 +81,12 @@ const App = () => {
             <Shop />
           </Route>
           <Route path="/dataWeather">
-            <Profile dataWeather={dataWeather} />
+            <Profile
+              dataWeather={dataWeather}
+              logged={logged}
+              setLogged={setLogged}
+              updatedData={updatedData}
+            />
           </Route>
           <Route exact path="/Product/:id" children={<Shop />}>
             <SingleProduct />

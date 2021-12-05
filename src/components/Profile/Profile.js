@@ -2,14 +2,50 @@ import "./Profile.css";
 import React from "react";
 
 const Profile = ({ dataWeather }) => {
+  let userData;
+  // let updatedData = [];
+
+  // const [data, setData] = useState([]);
+
+  if (!localStorage.getItem("user")) console.log("ops");
+  else {
+    userData = JSON.parse(localStorage.getItem("user"));
+  }
+  const [{ username, email }] = userData;
+  console.log(username, email);
+
+  // const { items } = updatedData;
+  // console.log(items);
+
+  // items.forEach((item) => {
+  //   let tdID = document.createElement("td");
+  //   let tdIMG = document.createElement("td");
+  //   let tdName = document.createElement("td");
+  //   let tdQuantity = document.createElement("td");
+  //   let tdPrice = document.createElement("td");
+  //   let tr = document.createElement("tr");
+  //   let tbody = document.createElement("tbody");
+
+  //   tdID.append(item.id);
+  //   tdIMG.append(item.img);
+  //   tdName.append(item.name);
+  //   tdQuantity.append(item.quantity);
+  //   tdPrice.append(item.price);
+
+  //   tr.append(tdID, tdIMG, tdName, tdQuantity, tdPrice);
+  //   tbody.appendChild(tr);
+
+  //   document.querySelector("table").appendChild(tbody);
+  // });
+
   return (
     <div className="holder">
       <div className="holder-info">
         <div className="userInfo">
           <h3>My Accout</h3>
           <hr />
-          <h6>name: Ahmad</h6>
-          <h6>Email: user@gmail.com</h6>
+          <h6>name: {username}</h6>
+          <h6>Email: {email}</h6>
         </div>
         <div className="weatherInfo">
           <ul>
@@ -34,6 +70,7 @@ const Profile = ({ dataWeather }) => {
               <th>ID</th>
               <th>Image</th>
               <th>Product</th>
+              <th>quantity</th>
               <th>Price</th>
             </tr>
           </thead>
@@ -59,7 +96,6 @@ const Profile = ({ dataWeather }) => {
           </tbody>
         </table>
       </div>
-
       <span>Total:</span>
     </div>
   );
