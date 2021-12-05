@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { CartProvider } from "react-use-cart";
 import Profile from "./components/Profile/Profile";
 import Shop from "./components/Shop/Shop";
-
+import Card from "./components/Shop/ProductCard/Card";
 import Home from "./components/Home/Home";
 import Signup from "./components/registerationforms/Signup";
 import Login from "./components/registerationforms/Login";
@@ -15,21 +15,17 @@ import Slider from "./components/Slider/Slider";
 import Checkout from "./components/Checkout/Checkout";
 
 const App = () => {
-  // All State
-  const [userSignupInformation, setUserSignupInformation] = useState({
-    username: "",
-    email: "",
-    password: "",
-    repeatPassword: "",
-  });
+    // All State
+    const [userSignupInformation, setUserSignupInformation] = useState({
+        username: "", email: "", password: "", repeatPassword: "",
+    });
 
-  const [userLoginInformation, setUserLoginInformation] = useState({
-    loginEmail: "",
-    loginPassword: "",
-  });
+    const [userLoginInformation, setUserLoginInformation] = useState({
+        loginEmail: "", loginPassword: "",
+    });
 
-  const [submitted, setSubmitted] = useState(false);
-  const [logged, setLogged] = useState(false);
+    const [submitted, setSubmitted] = useState(false);
+    const [logged, setLogged] = useState(false);
 
   return (
     <Router>

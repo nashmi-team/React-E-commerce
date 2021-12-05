@@ -1,6 +1,7 @@
 import React from "react";
 import "./registeration.css";
 import { withRouter } from "react-router";
+
 function Signup({
   userSignupInformation,
   setUserSignupInformation,
@@ -98,9 +99,9 @@ function Signup({
             />
           </label>
 
-          {userSignupInformation.password.length < 6 ||
+          {userSignupInformation.password.length < 6 &&
           userSignupInformation.password === "" ? (
-            <span style={{ color: "red" }}>Please enter your password </span>
+            <span style={{ color: "red" }}>Please enter your password</span>
           ) : null}
           <label htmlFor="r.password">
             Reapeat-password
