@@ -34,7 +34,7 @@ const YouTube = () => {
   }, []);
 
   return (
-    <div className="youtube">
+    <div className="container">
       {loading ? <div>Loading...</div> : null}
       {error ? <div>Error...</div> : null}
       {data.map((item,index) => (

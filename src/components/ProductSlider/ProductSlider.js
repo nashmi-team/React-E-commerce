@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from "react-elastic-carousel";
-import Item from "./item";
-import data from "../Shop/Data";
+import Item from "./item.css";
+import data from "../Shop/shop.data";
 import "./ProductSlider.css";
 import { useCart } from "react-use-cart";
 
@@ -11,35 +11,44 @@ const breakPoints = [
   { width: 768, itemsToShow: 3 },
   { width: 1200, itemsToShow: 4 },
 ];
-
 const ProductSlider = () => {
   const { addItem } = useCart();
 
   return (
-    <>
-      <h1 style={{ textAlign: "center" }}>
-        <span>Featured Products</span>
-      </h1>
+    <div className="py-5">
+      <div className="title-section text-center mb-5">
+        <h2 className="title">Featured Products</h2>
+      </div>
       <Carousel breakPoints={breakPoints} isRTL className="container">
         {data.map((data, index) => {
           return (
-            <Item key={index}>
-              <div className="slider">
+            <div key={index} className="product-card">
+              <div className="badge">Hot</div>
+              <div className="product-tumb">
                 <img src={data.img} alt={data.alt} />
-                <h3>{data.name}</h3>
-                <h5>{data.price}JD</h5>
-                <button
-                  className="add_to_cart sliderbtn"
-                  onClick={() => addItem(data)}
-                >
-                  Add To Cart
-                </button>
               </div>
-            </Item>
+              <div className="product-details">
+                <h4>
+                  <a href="">{data.name}</a>
+                </h4>
+                <div className="product-bottom-details">
+                  <div className="product-price">
+                    <small>$96.00</small>
+                    {data.price}JD
+                  </div>
+                  <div className="product-links">
+                    <i
+                      className="fas fa-cart-plus fa-2x"
+                      onClick={() => addItem(data)}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           );
         })}
       </Carousel>
-    </>
+    </div>
   );
 };
 
