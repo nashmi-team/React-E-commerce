@@ -2,10 +2,6 @@ import React from "react";
 import "./registeration.css";
 import { withRouter } from "react-router";
 function Signup({
-  email,
-  username,
-  password,
-  repeatPassword,
   userSignupInformation,
   setUserSignupInformation,
   submitted,
@@ -37,7 +33,6 @@ function Signup({
       ? JSON.parse(localStorage.getItem("user"))
       : [];
 
-    console.log(updatedData);
     if (
       updatedData.some((v) => v.email === userSignupInformation.email) ||
       password.value !== repeatPassword.value ||
@@ -54,8 +49,6 @@ function Signup({
       setSubmitted(true);
     }
   };
-
-  console.log(submitted);
 
   return (
     <div className="big-form">
@@ -105,9 +98,9 @@ function Signup({
             />
           </label>
 
-          {userSignupInformation.password.length < 6 &&
+          {userSignupInformation.password.length < 6 ||
           userSignupInformation.password === "" ? (
-            <span style={{ color: "red" }}>not correct password </span>
+            <span style={{ color: "red" }}>Please enter your password </span>
           ) : null}
           <label htmlFor="r.password">
             Reapeat-password

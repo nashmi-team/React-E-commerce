@@ -3,8 +3,6 @@ import { withRouter } from "react-router";
 import "./registeration.css";
 
 function Login({
-  loginEmail,
-  loginPassword,
   userLoginInformation,
   setUserLoginInformation,
   history,
@@ -43,7 +41,7 @@ function Login({
       });
       setLogged(!logged);
     } else {
-      alert("incorrect email  ");
+      alert("incorrect email or password ");
     }
   };
   return (
