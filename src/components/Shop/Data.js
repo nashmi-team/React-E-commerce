@@ -5,7 +5,7 @@ const data = [
     alt: "cello",
     name: "Cello",
     info: "lorem iLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.",
-    price: "210",
+    price: 210,
   },
   {
     id: "02",
@@ -13,7 +13,7 @@ const data = [
     alt: "drum",
     name: "Drum",
     info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.",
-    price: "150",
+    price: 150,
   },
   {
     id: "03",
@@ -21,7 +21,7 @@ const data = [
     alt: "piano",
     name: "Piano",
     info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.",
-    price: "350",
+    price: 350,
   },
   {
     id: "04",
@@ -29,7 +29,7 @@ const data = [
     alt: "violin",
     name: "Violin",
     info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.",
-    price: "65",
+    price: 65,
   },
   {
     id: "05",
@@ -37,7 +37,7 @@ const data = [
     alt: "saxophone",
     name: "Saxophone",
     info: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.",
-    price: "82",
+    price: 82,
   },
   {
     id: "06",
@@ -45,7 +45,7 @@ const data = [
     alt: "xylophone",
     name: "Xylophone",
     info: "loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
-    price: "82",
+    price: 82,
   },
   {
     id: "07",
@@ -53,7 +53,7 @@ const data = [
     alt: "Guitar",
     name: "Guitar",
     info: "loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
-    price: "40",
+    price: 40,
   },
   {
     id: "08",
@@ -61,7 +61,7 @@ const data = [
     alt: "Blue Guitar",
     name: "Blue-Guitar",
     info: "loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
-    price: "240",
+    price: 240,
   },
   {
     id: "09",
@@ -69,7 +69,7 @@ const data = [
     alt: "Microphone",
     name: "Microphone",
     info: "loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
-    price: "20",
+    price: 20,
   },
   {
     id: "10",
@@ -77,7 +77,7 @@ const data = [
     alt: "Headphones",
     name: "Headphones",
     info: "loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
-    price: "10",
+    price: 10,
   },
   {
     id: "11",
@@ -85,7 +85,7 @@ const data = [
     alt: "Harp",
     name: "Harp",
     info: "loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
-    price: "100",
+    price: 100,
   },
   {
     id: "12",
@@ -93,7 +93,7 @@ const data = [
     alt: "Synthesizer",
     name: "Synthesizer",
     info: "loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
-    price: "530",
+    price: 530,
   },
   {
     id: "13",
@@ -101,7 +101,7 @@ const data = [
     alt: "Keyboard",
     name: "Keyboard",
     info: "loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
-    price: "35",
+    price: 35,
   },
   {
     id: "14",
@@ -109,7 +109,7 @@ const data = [
     alt: "Woodwind",
     name: "Woodwind",
     info: "loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
-    price: "55",
+    price: 55,
   },
   {
     id: "15",
@@ -117,7 +117,7 @@ const data = [
     alt: "Tambourine",
     name: "Tambourine",
     info: "loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
-    price: "10",
+    price: 10,
   },
   {
     id: "16",
@@ -125,7 +125,7 @@ const data = [
     alt: "Stand",
     name: "Stand",
     info: "loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
-    price: "12",
+    price: 12,
   },
 ];
 

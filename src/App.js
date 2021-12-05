@@ -75,7 +75,7 @@ const App = () => {
           <Route path="/dataWeather">
             <Profile dataWeather={dataWeather} />
           </Route>
-          <Route exact path="/Product/:id" children={<Shop />}>
+          <Route exact path="/Product/:productName" children={<Shop />}>
             <SingleProduct />
           </Route>
         </Switch>

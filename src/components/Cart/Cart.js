@@ -47,9 +47,9 @@ const Cart = () => {
               <Table striped bordered hover className="cart_table">
                 <thead>
                   <tr>
-                    <th>#</th>
-                    <th>Image</th>
                     <th>Name</th>
+                    <th>Image</th>
+
                     <th>Price</th>
                     <th>Quantity</th>
                     <th>Remove</th>
@@ -59,15 +59,15 @@ const Cart = () => {
                   {items.map((item, id) => {
                     return (
                       <tr key={id}>
-                        <td>{item.id}</td>
+                        <td>{item.name}</td>
                         <td className="product_img">
                           <img src={item.img} alt={item.alt} />
                         </td>
-                        <td>{item.name}</td>
+
                         <td>
                           <b>{item.price} JD</b>
                         </td>
-                        <td>
+                        <td className="quantitiy-cell">
                           <button
                             className="btn btn-danger decrease"
                             onClick={() =>
@@ -88,17 +88,17 @@ const Cart = () => {
                         </td>
                         <td>
                           <button
-                            className="btn btn-danger"
+                            className="btn btn-danger remove"
                             onClick={() => removeItem(item.id)}
                           >
-                            <i className="far fa-trash-alt remove" />
+                            <i className="far fa-trash-alt " />
                           </button>
                         </td>
                       </tr>
                     );
                   })}
                   <tr>
-                    <td colSpan="4">
+                    <td colSpan="3">
                       <h3>Total: {cartTotal} JD</h3>
                     </td>
                     <td colSpan="2">
