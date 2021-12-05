@@ -1,6 +1,6 @@
 import React from "react";
 import Carousel from "react-elastic-carousel";
-import Item from "./item";
+import Item from "./item.css";
 import data from "../Shop/shop.data";
 import "./ProductSlider.css";
 
@@ -13,24 +13,34 @@ const breakPoints = [
 
 const ProductSlider = () => {
   return (
-    <>
-      <h1 style={{ textAlign: "center" }}>
+    <div className="py-5">
+      <h1 style={{ textAlign: "center", marginBottom: 15 }}>
         <span>Featured Products</span>
       </h1>
       <Carousel breakPoints={breakPoints} isRTL className="container">
         {data.map((data,index) => {
           return (
-            <Item key={index}>
-              <div className="slider-img">
-                <img src={data.img} alt={data.alt} />
-                <h3>{data.name}</h3>
-                <h5>{data.price}JD</h5>
+              <div key={index}  className="product-card">
+                  <div className="badge">Hot</div>
+                  <div className="product-tumb">
+                      <img src={data.img} alt={data.alt} />
+                  </div>
+                  <div className="product-details">
+                      <h4><a href="">{data.name}</a></h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
+                      <div className="product-bottom-details">
+                          <div className="product-price"><small>$96.00</small>{data.price}JD</div>
+                          <div className="product-links">
+                              <a href=""><i className="fa fa-heart"/></a>
+                              <a href=""><i className="fa fa-shopping-cart"/></a>
+                          </div>
+                      </div>
+                  </div>
               </div>
-            </Item>
           );
         })}
       </Carousel>
-    </>
+    </div>
   );
 };
 

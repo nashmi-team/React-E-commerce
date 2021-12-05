@@ -30,7 +30,7 @@ const Links = [
 
 const Navbar = () => {
   return (
-    <nav className="navbar fixed-top navbar-expand-md bg-dark custom-navbar ">
+    <nav className="navbar navbar-expand-md bg-dark">
       <img
         className="navbar-brand ml-3"
         id="logo_custom"
