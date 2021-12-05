@@ -1,12 +1,19 @@
-.slider-img {
+.slider {
   display: flex;
   flex-direction: column;
   background-color: white;
   color: black;
   align-items: center;
+  padding: 1rem;
 }
-.slider-img > img {
-  width: 60%;
+.slider > img {
+  width: 50%;
+}
+.sliderbtn {
+  font-size: 1rem;
+  padding: 1%;
+  width: 35%;
+  margin-bottom: 5%;
 }
 
 .title-section span{

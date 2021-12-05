@@ -85,7 +85,7 @@ span.glyphicon {
 }
 table {
   table-layout: fixed;
-  word-break: break-all;
+  word-break: keep-all;
   font-size: 0.75rem;
   text-align: center;
 }
@@ -97,12 +97,14 @@ table {
 .increase {
   padding: 0%;
   width: 1.3rem;
+  align-self: center;
 }
+
 .quantity {
   padding: 0.1rem;
 }
 .remove {
-  font-size: 1rem;
+  font-size: 0.7rem;
   text-align: center;
 }
 .checkout_active {
@@ -113,5 +115,9 @@ table {
   .item {
     justify-content: flex-start;
     padding: 10px;
+  }
+  .quantitiy-cell {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
