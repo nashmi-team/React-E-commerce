@@ -54,6 +54,7 @@ function Signup({
       setSubmitted(true);
     }
   };
+  console.log(submitted);
   return (
     <div className="big-form">
       <form className="form-container" onSubmit={handleSubmit}>
