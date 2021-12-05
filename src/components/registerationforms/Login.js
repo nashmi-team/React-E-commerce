@@ -36,7 +36,7 @@ function Login({
       )
     ) {
       history.push({
-        pathname: `/`,
+        pathname: `/shop`,
       });
     } else {
       alert("incorrect email ");
