@@ -1,44 +1,54 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import "./cart.css";
-import {Table} from "react-bootstrap";
-import {useCart} from "react-use-cart";
+import { Table } from "react-bootstrap";
+import { useCart } from "react-use-cart";
 
 const Cart = () => {
-    const {
-        isEmpty, totalItems, cartTotal, updateItemQuantity, removeItem, emptyCart, items,
-    } = useCart();
+  const {
+    isEmpty,
+    totalItems,
+    cartTotal,
+    updateItemQuantity,
+    removeItem,
+    emptyCart,
+    items,
+  } = useCart();
 
-    const [show, setShow] = useState(false);
-    //test
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+  const [show, setShow] = useState(false);
+  //test
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
-    return (<>
-        <div className="item">
-        <span className="" id="item">
+  return (
+    <>
+      <div className="item">
+        <span className="cart-counter" id="item">
           {totalItems}
         </span>
-        </div>
-        <i onClick={handleShow} className="fas fa-cart-plus fa-2x "/>
+      </div>
+      <i onClick={handleShow} className="cart-icon fas fa-cart-plus  " />
 
-        <div>
-            <div id="cart">
+      <div>
+        <div id="cart">
           <span
-              className="glyphicon glyphicon-shopping-cart"
-              onClick={handleShow}
+            className="glyphicon glyphicon-shopping-cart"
+            onClick={handleShow}
           />
-            </div>
-            <Modal show={show} onHide={handleClose} className="">
-                <Modal.Header>
-                    <Modal.Title className="text-primary">Shopping Bag</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    {isEmpty ? (<h3>Your Cart is Empty</h3>) : (<Table striped bordered hover className="cart_table">
-                        <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Image</th>
+        </div>
+        <Modal show={show} onHide={handleClose} className="">
+          <Modal.Header>
+            <Modal.Title className="text-primary">Shopping Bag</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            {isEmpty ? (
+              <h3>Your Cart is Empty</h3>
+            ) : (
+              <Table striped bordered hover className="cart_table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Image</th>
 
                     <th>Price</th>
                     <th>Quantity</th>

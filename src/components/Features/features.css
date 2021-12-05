@@ -1,4 +1,4 @@
-.features-row{
+.features-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
@@ -10,14 +10,14 @@
   align-items: center;
 }
 
-.single-features{
+.single-features {
   /*width: calc(100% / 3 - 2rem);*/
   margin-bottom: 1rem;
   text-align: center;
   /*background-color:blue;*/
 }
 
-.title-feature{
+.title-feature {
   font-size: 1em;
   font-weight: bold;
   color: #000;
@@ -26,20 +26,20 @@
   /*margin-bottom: 1rem;*/
 }
 
-.features-icon i{
+.features-icon i {
   font-size: 2em;
   color: #000;
   margin-bottom: 1rem;
 }
 
-@media screen and (max-width: 991px){
-  .features-row{
+@media screen and (max-width: 991px) {
+  .features-row {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media screen and (max-width: 767px){
-  .features-row{
+@media screen and (max-width: 767px) {
+  .features-row {
     grid-template-columns: 1fr;
   }
 }

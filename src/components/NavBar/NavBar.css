@@ -3,7 +3,7 @@
   /* z-index: 1; */
   /*position: sticky;*/
 
-  background-color:transparent !important;
+  background-color: transparent !important;
 }
 
 .nav-link {
@@ -40,5 +40,4 @@
   /*padding: 0.5rem 1rem;*/
   /* margin-left: 1rem; */
   font-size: 1.2rem;
-  font-family: "Montserrat", sans-serif;
 }
