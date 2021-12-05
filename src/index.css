@@ -1,13 +1,13 @@
 :root {
-  
-  --background: #f3f3f3;
-  --blue: #377dff;
-  --font-family: 'Montserrat', sans-serif;
+
+    --background: #f3f3f3;
+    --blue: #377dff;
+    --font-family: 'Montserrat', sans-serif;
 }
 
 body {
-  margin: 0%;
-  padding: 0%;
+    margin: 0%;
+    padding: 0%;
 }
 
 
