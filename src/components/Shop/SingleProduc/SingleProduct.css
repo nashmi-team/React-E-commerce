@@ -17,10 +17,13 @@
 }
 
 .product-container > img {
-    width: 40%;
-    height: 60%;
+  transition: transform 0.7s;
+  width: 40%;
+  height: 60%;
 }
-
+.product-container > img:hover {
+  transform: scale(1.15);
+}
 .product-details {
     display: flex;
     flex-direction: column;

@@ -40,82 +40,92 @@ const Cart = () => {
                             <th>Name</th>
                             <th>Image</th>
 
-                            <th>Price</th>
-                            <th>Quantity</th>
-                            <th>Remove</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        {items.map((item, id) => {
-                            return (<tr key={id}>
-                                <td>{item.name}</td>
-                                <td className="product_img">
-                                    <img src={item.img} alt={item.alt}/>
-                                </td>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Remove</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {items.map((item, id) => {
+                    return (
+                      <tr key={id}>
+                        <td className="product-name">{item.name}</td>
+                        <td className="product_img">
+                          <img src={item.img} alt={item.alt} />
+                        </td>
 
-                                <td>
-                                    <b>{item.price} JD</b>
-                                </td>
-                                <td className="quantitiy-cell">
-                                    <button
-                                        className="btn btn-danger decrease"
-                                        onClick={() => updateItemQuantity(item.id, item.quantity - 1)}
-                                    >
-                                        -
-                                    </button>
-                                    <b className="quantity">{item.quantity}</b>
-                                    <button
-                                        className="btn btn-success increase"
-                                        onClick={() => updateItemQuantity(item.id, item.quantity + 1)}
-                                    >
-                                        +
-                                    </button>
-                                </td>
-                                <td>
-                                    <button
-                                        className="btn btn-danger remove"
-                                        onClick={() => removeItem(item.id)}
-                                    >
-                                        <i className="far fa-trash-alt "/>
-                                    </button>
-                                </td>
-                            </tr>);
-                        })}
-                        <tr>
-                            <td colSpan="3">
-                                <h3>Total: {cartTotal} JD</h3>
-                            </td>
-                            <td colSpan="2">
-                                <button
-                                    className="btn btn-danger"
-                                    onClick={() => emptyCart(items)}
-                                >
-                                    Clear Cart
-                                </button>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </Table>)}
-                </Modal.Body>
-                <Modal.Footer>
-                    <button
-                        type="button"
-                        className={isEmpty ? "btn btn-default" : "btn btn-default checkout_active"}
-                        disabled={isEmpty ? true : false}
-                    >
-                        CHECKOUT
-                    </button>
-                    <button
-                        type="button"
-                        onClick={handleClose}
-                        className="btn btn-default"
-                    >
-                        Close
-                    </button>
-                </Modal.Footer>
-            </Modal>
-        </div>
-    </>);
+                        <td>
+                          <b>{item.price} JD</b>
+                        </td>
+                        <td className="quantitiy-cell">
+                          <button
+                            className="btn btn-danger decrease"
+                            onClick={() =>
+                              updateItemQuantity(item.id, item.quantity - 1)
+                            }
+                          >
+                            -
+                          </button>
+                          <b className="quantity">{item.quantity}</b>
+                          <button
+                            className="btn btn-success increase"
+                            onClick={() =>
+                              updateItemQuantity(item.id, item.quantity + 1)
+                            }
+                          >
+                            +
+                          </button>
+                        </td>
+                        <td>
+                          <button
+                            className="btn btn-danger remove"
+                            onClick={() => removeItem(item.id)}
+                          >
+                            <i className="far fa-trash-alt " />
+                          </button>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                  <tr>
+                    <td colSpan="3">
+                      <h4>Total: {cartTotal} JD</h4>
+                    </td>
+                    <td colSpan="2">
+                      <button
+                        className="btn btn-danger empty-cart"
+                        onClick={() => emptyCart(items)}
+                      >
+                        Clear Cart
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </Table>
+            )}
+          </Modal.Body>
+          <Modal.Footer>
+            <button
+              type="button"
+              className={
+                isEmpty ? "btn btn-default" : "btn btn-default checkout_active"
+              }
+              disabled={isEmpty ? true : false}
+            >
+              CHECKOUT
+            </button>
+            <button
+              type="button"
+              onClick={handleClose}
+              className="btn btn-default"
+            >
+              Close
+            </button>
+          </Modal.Footer>
+        </Modal>
+      </div>
+    </>
+  );
 };
 
 export default Cart;

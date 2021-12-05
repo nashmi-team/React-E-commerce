@@ -21,20 +21,26 @@ function Login({
         let loginUpdatedData = new Array();
         loginUpdatedData = JSON.parse(localStorage.getItem("user")) ? JSON.parse(localStorage.getItem("user")) : [];
 
-        if (loginUpdatedData.some((c) => c.email === userLoginInformation.loginEmail && c.password === userLoginInformation.loginPassword)) {
-            history.push({
-                pathname: `/shop`,
-            });
-            setLogged(!logged);
-        } else {
-            alert("incorrect email ");
-        }
-    };
-
-    return (<div className="login">
-        <form onSubmit={handleLoginSubmit} className="login-form">
-            <fieldset>
-                <legend>Login</legend>
+    if (
+      loginUpdatedData.some(
+        (c) =>
+          c.email === userLoginInformation.loginEmail &&
+          c.password === userLoginInformation.loginPassword
+      )
+    ) {
+      history.push({
+        pathname: `/shop`,
+      });
+      setLogged(!logged);
+    } else {
+      alert("incorrect email  ");
+    }
+  };
+  return (
+    <div className="login">
+      <form onSubmit={handleLoginSubmit} className="login-form">
+        <fieldset>
+          <legend>Login</legend>
 
                 <label>
                     Email
