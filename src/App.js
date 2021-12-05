@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { CartProvider } from "react-use-cart";
 import Profile from "./components/Profile/Profile";
 import Shop from "./components/Shop/Shop";
@@ -12,6 +12,7 @@ import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import SingleProduct from "./components/Shop/SingleProduc/SingleProduct";
 import Slider from "./components/Slider/Slider";
+import Checkout from "./components/Checkout/Checkout";
 
 const App = () => {
   // All State
@@ -65,6 +66,9 @@ const App = () => {
           </Route>
           <Route path="/slider">
             <Slider />
+          </Route>
+          <Route path="/checkout">
+            <Checkout />
           </Route>
         </Switch>
       </CartProvider>

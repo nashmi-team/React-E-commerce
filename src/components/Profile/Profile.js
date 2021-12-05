@@ -63,8 +63,10 @@ const Profile = () => {
               </thead>
               <tbody>{renderTableData()}</tbody>
             </table>
+            <h4 style={{ float: "right", fontWeight: "bolder" }}>
+              Total: <strong>${cartTotal}</strong>
+            </h4>
           </div>
-          <span>Total: {cartTotal}</span>
         </div>
       )}
     </>
