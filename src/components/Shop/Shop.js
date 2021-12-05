@@ -5,35 +5,35 @@ import Product from "./Product/Product";
 import "./Shop.css";
 
 const Shop = () => {
-  const [value, setState] = useState("Sort");
-  const [data, setData] = useState(data);
+  const [value, setValue] = useState("Sort");
+  const [newData, setNewData] = useState({ data: "" });
 
   const handleChange = (e) => {
-    setState({ value: e.target.value });
+    setValue({ value: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     switch (value) {
       case "Low price":
-        setData({
-          data: data.sort((a, b) => (a.price > b.price ? 1 : -1)),
+        setNewData({
+          data: newData.sort((a, b) => (a.price > b.price ? 1 : -1)),
         });
         break;
       case "High price":
-        setData({
-          data: data.sort((a, b) => (b.price > a.price ? 1 : -1)),
+        setNewData({
+          data: newData.sort((a, b) => (b.price > a.price ? 1 : -1)),
         });
         break;
 
       default:
-        setData({
-          data: data,
+        setNewData({
+          data: newData,
         });
         break;
     }
   };
-  const { data, value } = useState;
+  // const { data, value } = useState();
   console.log("all data");
   return (
     <div>
