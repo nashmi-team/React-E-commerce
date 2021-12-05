@@ -44,7 +44,8 @@ li {
 }
 
 sup {
-  font-size: 0.6em;
+  font-size: 0.8em;
+  font-weight: bolder;
 }
 
 .temp {
@@ -71,6 +72,11 @@ sup {
 
 .container {
   padding: 0;
+}
+
+td img {
+  width: 44.15px;
+  height: 44.15px;
 }
 
 @media all and (max-width: 270px) {
