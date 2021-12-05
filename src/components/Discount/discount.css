@@ -1,0 +1,35 @@
+.bg-image{
+    background-image: url("https://www.edrawsoft.com/templates/images/horizontal-discount-banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    margin-bottom: 2rem;
+}
+.discount-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*.site-section{*/
+/*    padding-top: 1rem;*/
+/*    padding-bottom: 2rem;*/
+/*}*/
+
+/*.section-heading{*/
+/*    font-size: 2rem;*/
+/*    font-weight: bold;*/
+/*    text-align: center;*/
+/*    margin-bottom: 1rem;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*}*/
+.items-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

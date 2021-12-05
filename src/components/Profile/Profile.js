@@ -5,15 +5,16 @@ import Api from "./Api";
 const Profile = () => {
   let userData;
 
-  // if (!localStorage.getItem("user")) alert("Please Login");
-  // else {
-  //   userData = JSON.parse(localStorage.getItem("user"));
-  // }
-  // const [{ username, email }] = userData;
-  // console.log(username, email);
+  if (!localStorage.getItem("user")) alert("Please Login");
+  else {
+    userData = JSON.parse(localStorage.getItem("user"));
+  }
+  const [{ username, email }] = userData;
+  console.log(username, email);
 
   const localData = JSON.parse(localStorage.getItem("react-use-cart"));
   const { items } = localData;
+  const { cartTotal } = localData;
 
   const renderTableData = () => {
     return items.map((item) => {
@@ -42,8 +43,8 @@ const Profile = () => {
             <div className="userInfo">
               <h3>My Accout</h3>
               <hr />
-              <h6>name: {}</h6>
-              <h6>Email: {}</h6>
+              <h6>name: {username}</h6>
+              <h6>Email: {email}</h6>
             </div>
             <Api />
           </div>
@@ -63,7 +64,7 @@ const Profile = () => {
               <tbody>{renderTableData()}</tbody>
             </table>
           </div>
-          <span>Total:</span>
+          <span>Total: {cartTotal}</span>
         </div>
       )}
     </>
