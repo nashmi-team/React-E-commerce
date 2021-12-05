@@ -74,6 +74,10 @@ sup {
   padding: 0;
 }
 
+tr .td {
+  padding: 0;
+}
+
 td img {
   width: 44.15px;
   height: 44.15px;

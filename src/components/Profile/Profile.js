@@ -17,17 +17,18 @@ const Profile = () => {
   const { cartTotal } = localData;
 
   const renderTableData = () => {
+    const style = { padding: "2%" };
     return items.map((item) => {
       const { id, img, alt, name, quantity, price } = item;
       return (
         <tr key={id}>
-          <td>{id}</td>
-          <td>
+          <td style={style}>{id}</td>
+          <td style={style}>
             <img src={img} alt={alt} />
           </td>
-          <td>{name}</td>
-          <td>{quantity}</td>
-          <td>{price}</td>
+          <td style={style}>{name}</td>
+          <td style={style}>{quantity}</td>
+          <td style={style}>{price}</td>
         </tr>
       );
     });
