@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from "react-elastic-carousel";
 import Item from "./item.css";
-import data from "../Shop/shop.data";
+import data from '.././Shop/Data'
 import "./ProductSlider.css";
 import { useCart } from "react-use-cart";
 
