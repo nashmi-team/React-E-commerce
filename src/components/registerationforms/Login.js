@@ -39,9 +39,10 @@ function Login({
         pathname: `/shop`,
       });
     } else {
-      alert("incorrect email ");
+      alert("incorrect email  ");
     }
   };
+  console.log("alkhadraaaaaaaaaaaaaa");
   return (
     <div className="login">
       <form onSubmit={handleLoginSubmit} className="login-form">
