@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { withRouter } from "react-router";
+import { useHistory } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 import "./cart.css";
 import { Table } from "react-bootstrap";
@@ -15,11 +17,24 @@ const Cart = () => {
     items,
   } = useCart();
 
+  const history = useHistory();
+
   const [show, setShow] = useState(false);
-  //test
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
+  const handelCheckout = () => {
+    if (localStorage.getItem("user")) {
+      history.push({
+        pathname: `/checkout`,
+      });
+      setShow(false);
+    } else {
+      history.push({
+        pathname: `/registeration`,
+      });
+      setShow(false);
+    }
+  };
   return (
     <>
       <div className="item">
@@ -117,6 +132,7 @@ const Cart = () => {
           <Modal.Footer>
             <button
               type="button"
+              onClick={handelCheckout}
               className={
                 isEmpty ? "btn btn-default" : "btn btn-default checkout_active"
               }
@@ -138,4 +154,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default withRouter(Cart);
