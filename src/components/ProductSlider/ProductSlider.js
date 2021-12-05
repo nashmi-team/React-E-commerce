@@ -1,6 +1,5 @@
 import React from "react";
 import Carousel from "react-elastic-carousel";
-import Item from "./item.css";
 import data from '.././Shop/Data'
 import "./ProductSlider.css";
 import { useCart } from "react-use-cart";
@@ -20,7 +19,7 @@ const ProductSlider = () => {
       <div className="title-section text-center mb-5">
         <h2 className="title">Featured Products</h2>
       </div>
-      <Carousel breakPoints={breakPoints} isRTL className="container">
+      <Carousel breakPoints={breakPoints} >
         {data.map((data,index) => {
           return (
               <div key={index}  className="product-card">

@@ -11,6 +11,7 @@ import Login from "./components/registerationforms/Login";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import SingleProduct from "./components/Shop/SingleProduc/SingleProduct";
+import Slider from "./components/Slider/Slider";
 
 const App = () => {
   // All State
@@ -77,6 +78,9 @@ const App = () => {
           </Route>
           <Route exact path="/Product/:id" children={<Shop />}>
             <SingleProduct />
+          </Route>
+          <Route path="/slider">
+            <Slider />
           </Route>
         </Switch>
       </CartProvider>
