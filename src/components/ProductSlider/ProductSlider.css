@@ -8,3 +8,17 @@
 .slider-img > img {
   width: 60%;
 }
+
+.title-section span{
+  color:#000;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.title-section h2{
+  font-family: var(--font-family);
+  font-size:2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+

@@ -3,6 +3,8 @@ import Carousel from "react-elastic-carousel";
 import Item from "./item.css";
 import data from "../Shop/shop.data";
 import "./ProductSlider.css";
+import { useCart } from "react-use-cart";
+
 
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
@@ -10,13 +12,14 @@ const breakPoints = [
   { width: 768, itemsToShow: 3 },
   { width: 1200, itemsToShow: 4 },
 ];
-
 const ProductSlider = () => {
-  return (
+    const { addItem } = useCart();
+
+    return (
     <div className="py-5">
-      <h1 style={{ textAlign: "center", marginBottom: 15 }}>
-        <span>Featured Products</span>
-      </h1>
+      <div className="title-section text-center mb-5">
+        <h2 className="title">Featured Products</h2>
+      </div>
       <Carousel breakPoints={breakPoints} isRTL className="container">
         {data.map((data,index) => {
           return (
@@ -27,12 +30,10 @@ const ProductSlider = () => {
                   </div>
                   <div className="product-details">
                       <h4><a href="">{data.name}</a></h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
                       <div className="product-bottom-details">
                           <div className="product-price"><small>$96.00</small>{data.price}JD</div>
                           <div className="product-links">
-                              <a href=""><i className="fa fa-heart"/></a>
-                              <a href=""><i className="fa fa-shopping-cart"/></a>
+                                  <i className="fas fa-cart-plus fa-2x"  onClick={() => addItem(data)} />
                           </div>
                       </div>
                   </div>
