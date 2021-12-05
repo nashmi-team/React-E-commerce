@@ -16,8 +16,12 @@
   padding: 1rem;
 }
 .product-container > img {
+  transition: transform 0.7s;
   width: 40%;
   height: 60%;
+}
+.product-container > img:hover {
+  transform: scale(1.15);
 }
 .product-details {
   display: flex;

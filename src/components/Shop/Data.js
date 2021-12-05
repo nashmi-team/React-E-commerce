@@ -89,7 +89,7 @@ const data = [
   },
   {
     id: "12",
-    img: "./assest/imgs/Synthesizer.jpg",
+    img: "../assest/imgs/Synthesizer.jpg",
     alt: "Synthesizer",
     name: "Synthesizer",
     info: "loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
@@ -97,7 +97,7 @@ const data = [
   },
   {
     id: "13",
-    img: "./assest/imgs/Keyboard.jpg",
+    img: "../assest/imgs/Keyboard.jpg",
     alt: "Keyboard",
     name: "Keyboard",
     info: "loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
@@ -105,7 +105,7 @@ const data = [
   },
   {
     id: "14",
-    img: "./assest/imgs/Woodwind.jpg",
+    img: "../assest/imgs/Woodwind.jpg",
     alt: "Woodwind",
     name: "Woodwind",
     info: "loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
@@ -113,7 +113,7 @@ const data = [
   },
   {
     id: "15",
-    img: "./assest/imgs/Tambourine.jpg",
+    img: "../assest/imgs/Tambourine.jpg",
     alt: "Tambourine",
     name: "Tambourine",
     info: "loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
@@ -121,7 +121,7 @@ const data = [
   },
   {
     id: "16",
-    img: "./assest/imgs/Stand.jpg",
+    img: "../assest/imgs/Stand.jpg",
     alt: "Stand",
     name: "Stand",
     info: "loremLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. ",
