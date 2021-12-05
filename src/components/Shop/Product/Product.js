@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-// import "./Product.css";
+
 import { useCart } from "react-use-cart";
 import { Link } from "react-router-dom";
 import Aos from "aos";
@@ -26,7 +26,6 @@ const Product = (props) => {
         <h2 className="title-desc">
           <Link to={`/Product/${props.productName}`}>{props.productName}</Link>
         </h2>
-        {/*<p>{item.description}</p>*/}
         <div className="price">{props.price} JD</div>
       </figcaption>
     </figure>
