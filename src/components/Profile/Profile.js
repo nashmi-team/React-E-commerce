@@ -2,6 +2,7 @@ import "./Profile.css";
 import React from "react";
 
 const Profile = ({ dataWeather }) => {
+  console.log("Ahmad");
   return (
     <div className="holder">
       <div className="holder-info">
