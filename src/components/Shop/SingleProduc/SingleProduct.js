@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useCart } from "react-use-cart";
 import { withRouter } from "react-router";
 import data from "../Data";
+
 import "./SingleProduct.css";
 
 const SingleProduct = (props) => {
@@ -14,9 +15,17 @@ const SingleProduct = (props) => {
           return (
             <>
               <img src={`.${data.img}`} />
-              <h1>{data.name}</h1>
-              <h2> Price {data.price} JD</h2>
-              <p>{data.info}</p>
+              <div className="product-details">
+                <h1>{data.name}</h1>
+                <h6> {data.price} JD</h6>
+                <p>{data.info}</p>
+                <button
+                  className="add-to-cart"
+                  onClick={() => addItem(props.item)}
+                >
+                  Add To Cart
+                </button>
+              </div>
             </>
           );
         }
