@@ -57,9 +57,10 @@ const Navbar = () => {
             );
           })}
         </ul>
-        <div className="nav-link ml-auto">
-          <Cart />
-        </div>
+
+      </div>
+      <div className=" ml-auto">
+        <Cart />
       </div>
     </nav>
   );

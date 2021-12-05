@@ -14,7 +14,6 @@ import SingleProduct from "./components/Shop/SingleProduc/SingleProduct";
 
 const App = () => {
   // All State
-
   const [userSignupInformation, setUserSignupInformation] = useState({
     username: "",
     email: "",
@@ -28,24 +27,7 @@ const App = () => {
   });
 
   const [submitted, setSubmitted] = useState(false);
-
-  // Weather Data & State
-  const [dataWeather, setDataWeather] = useState({});
-
-  const get = async () => {
-    const response = await fetch(
-      "https://api.openweathermap.org/data/2.5/weather?q=Amman&units=metric&appid=0cef1dfd8f5e8437bbb45886a733a63c"
-    );
-    const data = await response.json();
-
-    setDataWeather({
-      name: data.name,
-      temp: Math.round(data.main.temp),
-      description: data.weather[0].description,
-      icon: `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`,
-    });
-  };
-  useEffect(() => get(), []);
+  const [logged, setLogged] = useState(false);
 
   return (
     <Router>
@@ -63,6 +45,8 @@ const App = () => {
               <Login
                 userLoginInformation={userLoginInformation}
                 setUserLoginInformation={setUserLoginInformation}
+                logged={logged}
+                setLogged={setLogged}
               />
             </div>
           </Route>
@@ -73,9 +57,9 @@ const App = () => {
             <Shop />
           </Route>
           <Route path="/dataWeather">
-            <Profile dataWeather={dataWeather} />
+            <Profile logged={logged} setLogged={setLogged} />
           </Route>
-          <Route exact path="/Product/:id" children={<Shop />}>
+          <Route exact path="/Product/:productName" children={<Shop />}>
             <SingleProduct />
           </Route>
         </Switch>
