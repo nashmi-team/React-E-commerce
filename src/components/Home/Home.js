@@ -4,13 +4,17 @@ import { Reviews } from "../Reviews/Reviews";
 import YouTube from "../Youtube/Youtube";
 import Header from "../Header/Header";
 import Features from "../Features/Features";
+import Discount from "../Discount/Discount.jsx";
+import Slider from "../Slider/Slider";
 
 const Home = () => {
   return (
     <>
       <Header />
         <Features />
-      <ProductSlider />
+        <Slider />
+      {/*<ProductSlider />*/}
+      {/*<Discount />*/}
       <YouTube />
       <Reviews />
     </>

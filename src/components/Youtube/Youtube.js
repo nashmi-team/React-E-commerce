@@ -34,7 +34,10 @@ const YouTube = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container-fluid">
+      <div className="title-section text-center mb-5">
+        <h2 className="title">Our Channel On Youtube</h2>
+      </div>
       {loading ? <div>Loading...</div> : null}
       {error ? <div>Error...</div> : null}
       {data.map((item,index) => (
