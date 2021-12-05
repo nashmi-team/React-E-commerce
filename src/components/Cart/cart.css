@@ -85,9 +85,12 @@ span.glyphicon {
 }
 table {
   table-layout: fixed;
-  word-break: break-all;
-  font-size: 0.75rem;
+  font-size: 0.75em;
   text-align: center;
+}
+.table td {
+  padding: 5%;
+  vertical-align: middle;
 }
 
 .fas {
@@ -96,20 +99,42 @@ table {
 .decrease,
 .increase {
   padding: 0%;
-  width: 1.3rem;
+  width: 1rem;
 }
-.quantity {
-  padding: 0.1rem;
-}
+
 .remove {
-  font-size: 1rem;
+  font-size: 0.7em;
   text-align: center;
 }
 .checkout_active {
   background-color: green;
   color: white;
 }
+@media (max-width: 450px) {
+  .product-name {
+    font-size: 0.73em;
+  }
+  .table td {
+    padding: 3%;
+    vertical-align: middle;
+  }
+  .empty-cart {
+    padding: 0.1rem;
+  }
+  .quantitiy-cell {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .decrease,
+  .increase {
+    align-self: center;
+  }
+}
 @media (max-width: 768px) {
+  .table td {
+    padding: 3%;
+    vertical-align: middle;
+  }
   .item {
     justify-content: flex-start;
     padding: 10px;

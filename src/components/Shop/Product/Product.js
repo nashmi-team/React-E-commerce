@@ -14,7 +14,7 @@ const Product = (props) => {
       <p className="price">{props.price} JD</p>
       <div className="btn-view">
         <button className="view-product">
-          <Link to={`/Product/${props.id}`}>View</Link>
+          <Link to={`/product/${props.productName}`}>View</Link>
         </button>
         <button className="add_to_cart" onClick={() => addItem(props.item)}>
           Add To Cart

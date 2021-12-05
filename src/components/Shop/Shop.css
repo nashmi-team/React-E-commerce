@@ -6,17 +6,8 @@
   grid-template-rows: minmax(100px, 1fr);
 }
 
-@media only screen and (min-width: 280px) and (max-width: 750px) {
-  .showProduct {
-    width: 100%;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    margin: 25% auto;
-  }
-}
-
-
 form {
+  width: 100%;
   padding: 10px;
   display: flex;
   justify-content: flex-end;
@@ -24,9 +15,9 @@ form {
 }
 input[type="submit"] {
   border: none;
-  background:orangered;
-  color:white;
-  margin-left:15px;
+  background: orangered;
+  color: white;
+  margin-left: 15px;
   border-radius: 3px;
   padding: 0 15px;
   cursor: pointer;
@@ -38,16 +29,27 @@ input[type="submit"] {
   border: none;
   cursor: pointer;
 }
+.breadCrump {
+  width: 73%;
+  margin: 1%;
+}
 
-@media screen and (max-width:1000px){
-  .showProduct{
+@media screen and (max-width: 1000px) {
+  .showProduct {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-
-@media screen and (max-width:720px){
-  .showProduct{
+@media screen and (max-width: 720px) {
+  .showProduct {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+/* @media only screen and (min-width: 280px) and (max-width: 750px) {
+  .showProduct {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin: 25% auto;
+  }
+} */
