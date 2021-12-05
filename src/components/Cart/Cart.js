@@ -59,7 +59,7 @@ const Cart = () => {
                   {items.map((item, id) => {
                     return (
                       <tr key={id}>
-                        <td>{item.name}</td>
+                        <td className="product-name">{item.name}</td>
                         <td className="product_img">
                           <img src={item.img} alt={item.alt} />
                         </td>
@@ -99,11 +99,11 @@ const Cart = () => {
                   })}
                   <tr>
                     <td colSpan="3">
-                      <h3>Total: {cartTotal} JD</h3>
+                      <h4>Total: {cartTotal} JD</h4>
                     </td>
                     <td colSpan="2">
                       <button
-                        className="btn btn-danger"
+                        className="btn btn-danger empty-cart"
                         onClick={() => emptyCart(items)}
                       >
                         Clear Cart

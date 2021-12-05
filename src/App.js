@@ -61,7 +61,7 @@ const App = () => {
           <Route path="/dataWeather">
             <Profile logged={logged} setLogged={setLogged} />
           </Route>
-          <Route exact path="/Product/:productName" children={<Shop />}>
+          <Route exact path="/product/:productName">
             <SingleProduct />
           </Route>
           <Route path="/slider">
