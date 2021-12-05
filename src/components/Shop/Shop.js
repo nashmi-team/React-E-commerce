@@ -13,6 +13,7 @@ const Shop = () => {
   };
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     switch (value) {
       case "Low price":
         setData({
@@ -31,10 +32,9 @@ const Shop = () => {
         });
         break;
     }
-
-    e.preventDefault();
   };
   const { data, value } = useState;
+  console.log("all data");
   return (
     <div>
       <form onSubmit={handleSubmit}>
