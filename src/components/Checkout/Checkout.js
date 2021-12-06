@@ -15,8 +15,8 @@ const Checkout = ({ history }) => {
     <div className="site-wrap">
       <div className="bg-light py-3">
         <div className="row test">
-          <div className="col-md-7 mb-5 mb-md-0">
-            <h2 className="h3 mb-3 text-black">Billing Details</h2>
+          <div className="col-md-12 mb-9 mb-md-0">
+            <div className="h3 mb-3 text-black">Billing Details</div>
             <form>
               <div className="p-3 p-lg-5 border">
                 <div className="form-group">
