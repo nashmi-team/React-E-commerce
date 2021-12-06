@@ -54,18 +54,19 @@ const Navbar = ({ logged, setLogged }) => {
           })}
           <li className="nav-item">
             {logged ? (
-              <Link onClick={handleLogout} className="nav-link" to="/">
-                Logout
-              </Link>
-            ) : null}
-          </li>
-          <li className="nav-item">
-            {logged ? (
               <Link className="nav-link" to="/dataWeather">
                 My Account
               </Link>
             ) : null}
           </li>
+          <li className="nav-item">
+            {logged ? (
+              <Link onClick={handleLogout} className="nav-link" to="/">
+                Logout
+              </Link>
+            ) : null}
+          </li>
+
           <li className="nav-item">
             {!logged ? (
               <Link

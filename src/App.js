@@ -36,7 +36,6 @@ const App = () => {
     <Router>
       <CartProvider>
         <NavBar logged={logged} setLogged={setLogged} />
-        <NavBar />
         <ScrollToTop />
         <Switch>
           <Route path="/registeration">
