@@ -22,7 +22,6 @@ const Navbar = ({ logged, setLogged }) => {
   const handleLogout = () => {
     setLogged(false);
     emptyCart(items);
-    // sessionStorage.removeItem('loggedAccount');
   };
 
   return (

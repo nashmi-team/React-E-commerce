@@ -4,10 +4,11 @@
   font-size: 30px;
   float: right;
   color: #007bff;
-  /* margin-right: 2%; */
   cursor: pointer;
   position: fixed;
+  z-index: 9999;
 }
-.scrollTopBtn > i {
+
+.scrollTopBtn>i {
   font-size: 2rem;
 }

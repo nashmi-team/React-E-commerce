@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-
 import { useCart } from "react-use-cart";
 import { Link } from "react-router-dom";
 import Aos from "aos";
@@ -8,7 +7,6 @@ import "../ProductCard/card.css";
 
 const Product = (props) => {
   const { addItem } = useCart();
-
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);

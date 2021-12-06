@@ -1,5 +1,4 @@
 import React from "react";
-// import './slider.css';
 import data from ".././Shop/Data";
 import "../ProductSlider/item.css";
 import { useCart } from "react-use-cart";

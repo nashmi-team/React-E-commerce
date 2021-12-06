@@ -3,6 +3,7 @@
   text-align: center;
   margin-top: 3rem;
 }
+
 .Ourteam-section {
   padding: 3em 3em;
   text-align: center;
@@ -53,6 +54,7 @@
   .Ourteam-section {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .person {
     display: flex;
     flex-direction: column;
@@ -63,6 +65,7 @@
   .Ourteam-section {
     grid-template-columns: repeat(1, 1fr);
   }
+
   .person {
     display: flex;
     flex-direction: column;

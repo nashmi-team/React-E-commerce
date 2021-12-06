@@ -1,6 +1,5 @@
 import React from "react";
 import "./features.css";
-// <i className="fas fa-sync"></i>
 
 const features = [
   {
@@ -47,14 +46,3 @@ const Features = () => {
 };
 
 export default Features;
-/*
-  <div className="single-features">
-                        <span className="features-icon">
-                            <i className="fas fa-truck"/>
-                        </span>
-                        <h6 className="title-feature">Easy to use</h6>
-                        <p>
-                            inappropriate behavior is often laughed off as “
-                        </p>
-                    </div>
- */

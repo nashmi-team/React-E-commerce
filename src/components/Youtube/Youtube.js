@@ -7,7 +7,6 @@ const channelId = "UCCejg-zx3R3OXFItvJxVvoA";
 const maxResults = 1;
 const finalUrl = `https://www.googleapis.com/youtube/v3/search?key=${API}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxResults}`;
 
-
 const YouTube = () => {
   const [data, setData] = useState([]); //set data to empty array
   const [loading, setLoading] = useState(false);

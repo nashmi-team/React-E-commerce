@@ -13,7 +13,6 @@ a {
   width: 300px;
   position: relative;
   box-shadow: 0 2px 7px #dfdfdf;
-  /*margin: 50px auto;*/
   background: #fafafa;
   margin: 0 15px;
 }
@@ -90,16 +89,10 @@ a {
 
 .product-bottom-details i {
   font-size: 1.5em;
-  /* color: #999; */
   margin-left: 1.5rem;
   cursor: pointer;
 
 }
-/* 
-.product-bottom-details i:hover {
-  color: #0000FF;
-  transition: all 0.3s;
-} */
 
 .product-price {
   font-size: 18px;
@@ -115,10 +108,6 @@ a {
   margin-right: 5px;
 }
 
-.product-links {
-  
-  /* text-align: right; */
-}
 
 .product-links a {
   display: inline-block;

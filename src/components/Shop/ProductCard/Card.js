@@ -1,8 +1,7 @@
 import React from "react";
 import "./card.css";
 
-// import data from "./Data";
-function Card(props) {
+function Card() {
   return (
     <div>
       <figure className="snip1268">

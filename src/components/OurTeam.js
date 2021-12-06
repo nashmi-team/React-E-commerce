@@ -45,7 +45,7 @@ const OurTeam = () => {
             className="img-person"
           />
           <div className="person-title">
-            <h4>ahmad aldabouqi</h4>
+            <h4>Ahmad Al-dabouqi</h4>
             <h6> Front-end Developer</h6>
           </div>
         </div>
@@ -56,7 +56,7 @@ const OurTeam = () => {
             className="img-person"
           />
           <div className="person-title">
-            <h4>beshir alkhadra</h4>
+            <h4>Beshir Alkhadra</h4>
             <h6> Front-end Developer</h6>
           </div>
         </div>

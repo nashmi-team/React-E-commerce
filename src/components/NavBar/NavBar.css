@@ -1,8 +1,4 @@
 .custom-navbar {
-  /*box-shadow: 10px 10px 10px #943030;*/
-  /* z-index: 1; */
-  /*position: sticky;*/
-
   background-color: transparent !important;
 }
 
@@ -22,6 +18,7 @@
 .custom-toggler .navbar-toggler-icon {
   width: 18px !important;
 }
+
 .fa-solid {
   color: white;
 }
@@ -32,12 +29,9 @@
 }
 
 #logo_custom {
-  /*margin-top: -6px;*/
   width: 3rem;
 }
 
 .nav-item {
-  /*padding: 0.5rem 1rem;*/
-  /* margin-left: 1rem; */
   font-size: 1.2rem;
 }

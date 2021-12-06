@@ -86,6 +86,7 @@ td img {
     font-size: 8vw;
   }
 }
+
 @media all and (max-width: 420px) {
   .holder-info {
     display: flex;

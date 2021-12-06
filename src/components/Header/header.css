@@ -7,6 +7,7 @@
   background-size: cover;
   height: 70vh;
 }
+
 .btn-shop {
   background-color: #0000ff !important;
   color: #fff;
@@ -18,12 +19,14 @@
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
+
 .btn-shop:hover {
   background-color: #fff !important;
   color: #0000ff;
   transition: all 0.3s ease-in-out;
   transform: scale(1.1);
 }
+
 .overlay {
   background: rgba(11, 14, 18, 0.75);
   height: 100%;
@@ -32,6 +35,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .header-content {
   color: #fff;
   font-family: var(--font-family);
@@ -49,12 +53,24 @@
   }
 }
 
+@media screen and (max-width: 480px) {
+  .header-content h1 {
+    font-size: 2.5em;
+  }
+
+  .header-content {
+    padding-left: 1em;
+  }
+
+}
+
+
 @media only screen and (max-width: 375px) {
   .header-content h1 {
     font-size: 2em;
   }
+
   .header-content {
-    /*font-size: 1.5em;*/
     padding: 2rem;
   }
 }
