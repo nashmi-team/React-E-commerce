@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { CartProvider } from "react-use-cart";
 import Profile from "./components/Profile/Profile";
 import Shop from "./components/Shop/Shop";
-import Card from "./components/Shop/ProductCard/Card";
 import Home from "./components/Home/Home";
 import Signup from "./components/registerationforms/Signup";
 import Login from "./components/registerationforms/Login";
@@ -14,6 +13,7 @@ import SingleProduct from "./components/Shop/SingleProduc/SingleProduct";
 import Slider from "./components/Slider/Slider";
 import Checkout from "./components/Checkout/Checkout";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import OurTeam from "./components/OurTeam";
 
 const App = () => {
   // All State
@@ -76,6 +76,9 @@ const App = () => {
           </Route>
           <Route path="/checkout">
             <Checkout />
+          </Route>
+          <Route path="/our-team">
+            <OurTeam />
           </Route>
         </Switch>
       </CartProvider>

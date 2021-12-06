@@ -47,7 +47,6 @@
 
 .carousel .testimonial::before {
   content: "\201C";
-
   color: #e2e2e2;
   font-weight: bold;
   font-size: 68px;
@@ -103,7 +102,8 @@
     align-items: center;
     margin-bottom: 1rem;
   }
-  .media img{
+
+  .media img {
     margin-bottom: 1rem;
   }
 }
