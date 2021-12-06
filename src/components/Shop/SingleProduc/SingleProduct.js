@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import data from "../Data";
 
 import "./SingleProduct.css";
+import React from "react";
 
 const SingleProduct = (props) => {
   const productName = props.match.params.productName;
@@ -15,10 +16,10 @@ const SingleProduct = (props) => {
       </p>
 
       <div className="product-container">
-        {data.map((data) => {
+        {data.map((data, id) => {
           if (data.name === productName) {
             return (
-              <>
+              <React.Fragment key={id}>
                 <img src={data.img} alt={data.alt} />
                 <div className="product-details">
                   <h1>{data.name}</h1>
@@ -28,7 +29,7 @@ const SingleProduct = (props) => {
                     Add To Cart
                   </button>
                 </div>
-              </>
+              </React.Fragment>
             );
           } else {
             return null;
