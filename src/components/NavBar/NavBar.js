@@ -80,7 +80,7 @@ const Navbar = ({ logged, setLogged }) => {
         </ul>
       </div>
       <div className=" ml-auto">
-        <Cart />
+        <Cart logged={logged} setLogged={setLogged} />
       </div>
     </nav>
   );

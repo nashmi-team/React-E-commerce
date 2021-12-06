@@ -6,7 +6,7 @@ import "./cart.css";
 import { Table } from "react-bootstrap";
 import { useCart } from "react-use-cart";
 
-const Cart = () => {
+const Cart = ({ logged }) => {
   const {
     isEmpty,
     totalItems,
@@ -23,7 +23,7 @@ const Cart = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const handelCheckout = () => {
-    if (localStorage.getItem("user")) {
+    if (logged) {
       history.push({
         pathname: `/checkout`,
       });
