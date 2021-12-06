@@ -5,7 +5,6 @@ import { withRouter } from "react-router";
 const Checkout = ({ history }) => {
   const handleOrder = (event) => {
     event.preventDefault();
-    console.log("hhhhhhhh");
     history.push({
       pathname: `/`,
     });
@@ -16,7 +15,9 @@ const Checkout = ({ history }) => {
       <div className="bg-light py-3">
         <div className="row test">
           <div className="col-md-12 mb-9 mb-md-0">
-            <div className="h3 mb-3 text-black">Billing Details</div>
+            <div className="h3 mb-3 text-black" style={{ textAlign: "center" }}>
+              Billing Details
+            </div>
             <form>
               <div className="p-3 p-lg-5 border">
                 <div className="form-group">

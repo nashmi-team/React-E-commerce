@@ -20,7 +20,7 @@ const OurTeam = () => {
           <img
             src="./assest/imgs/Abdelkareem.jpg"
             alt="Abdelkareem"
-            class="img-person"
+            className="img-person"
           />
           <div className="person-title">
             <h4> Abdelkareem Aldeek</h4>

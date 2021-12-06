@@ -13,7 +13,7 @@ import SingleProduct from "./components/Shop/SingleProduc/SingleProduct";
 import Slider from "./components/Slider/Slider";
 import Checkout from "./components/Checkout/Checkout";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
-import OurTeam from "./components/OurTeam";
+import OurTeam from "./components/OurTeam/OurTeam";
 
 const App = () => {
   // All State
