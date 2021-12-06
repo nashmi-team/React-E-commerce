@@ -15,17 +15,21 @@ import Slider from "./components/Slider/Slider";
 import Checkout from "./components/Checkout/Checkout";
 
 const App = () => {
-    // All State
-    const [userSignupInformation, setUserSignupInformation] = useState({
-        username: "", email: "", password: "", repeatPassword: "",
-    });
+  // All State
+  const [userSignupInformation, setUserSignupInformation] = useState({
+    username: "",
+    email: "",
+    password: "",
+    repeatPassword: "",
+  });
 
-    const [userLoginInformation, setUserLoginInformation] = useState({
-        loginEmail: "", loginPassword: "",
-    });
+  const [userLoginInformation, setUserLoginInformation] = useState({
+    loginEmail: "",
+    loginPassword: "",
+  });
 
-    const [submitted, setSubmitted] = useState(false);
-    const [logged, setLogged] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [logged, setLogged] = useState(false);
 
   return (
     <Router>
@@ -51,13 +55,13 @@ const App = () => {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/shop">
+          <Route exact path="/shop">
             <Shop />
           </Route>
           <Route path="/dataWeather">
             <Profile logged={logged} setLogged={setLogged} />
           </Route>
-          <Route exact path="/product/:productName">
+          <Route exact path="/shop/:productName">
             <SingleProduct />
           </Route>
           <Route path="/slider">

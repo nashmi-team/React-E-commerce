@@ -35,7 +35,7 @@ const Product = (props) => {
 
         <Link
           className="add-to-cart1"
-          to={`/Product/${props.productName}`}
+          to={`/shop/${props.productName}`}
           onClick={() => addItem(props.item)}
         >
           Add to Cart
