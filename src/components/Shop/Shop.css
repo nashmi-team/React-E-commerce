@@ -1,51 +1,62 @@
 .showProduct {
-    width: 80%;
-    margin: 1% auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: minmax(100px, 1fr);
+  width: 80%;
+  /* max-width: 80%; */
+  margin: 1% auto;
+  display: grid;
+  gap: 2em;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: minmax(100px, 1fr);
 }
 
 form {
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 1rem;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
 }
 
 input[type="submit"] {
-    border: none;
-    background: orangered;
-    color: white;
-    margin-left: 15px;
-    border-radius: 3px;
-    padding: 0 15px;
-    cursor: pointer;
+  border: none;
+  background: orangered;
+  color: white;
+  margin-left: 15px;
+  border-radius: 3px;
+  padding: 0 15px;
+  cursor: pointer;
 }
 
 .breadCrump {
-    width: 73%;
-    margin: 1%;
+  width: 80%;
+  margin: 1%;
+  text-decoration: none;
+  font-size: 1.2rem;
 }
 
-@media screen and (max-width: 1000px) {
-    .showProduct {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.breadCrump:hover a {
+  text-decoration: none !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .showProduct {
+    grid-template-columns: repeat(2, 1fr);
+
+  }
 }
 
 @media screen and (max-width: 720px) {
-    .showProduct {
-        grid-template-columns: repeat(1, 1fr);
-    }
+  .showProduct {
+    grid-template-columns: repeat(1, 1fr);
+    width: 70%;
+  }
 }
 
-/* @media only screen and (min-width: 280px) and (max-width: 750px) {
+@media screen and (max-width: 280px) {
   .showProduct {
-    width: 100%;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    margin: 25% auto;
+    grid-template-columns: repeat(1, 1fr);
+    width: 70%;
+    margin: 0;
+    /* justify-self: center;
+    align-items: center; */
   }
-} */
+}

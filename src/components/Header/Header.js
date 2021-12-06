@@ -2,14 +2,9 @@ import React from "react";
 import "./header.css";
 import { Link } from "react-router-dom";
 
-
 const Header = () => {
-
-
-  
   return (
-    <div className="header"  >
-
+    <div className="header">
       <div className="overlay">
         <div className="container ">
           <div className="row ">
@@ -19,9 +14,11 @@ const Header = () => {
                   Welcome to <span>Cello Shop</span>
                 </h1>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                  quam velit, vulputate eu pharetra nec, mattis ac neque. Duis
-                  vulputate commodo lectus, ac blandit elit tincidunt id.
+                  Cello is an e-commerce website in Jordan, to sell the musical
+                  instruments of all kinds , in a way to make purchasing and
+                  owning musical instruments easy for everyone, by providing
+                  great prices and excellent service, regardless of where you
+                  live.
                 </p>
                 <Link to="/shop" className="btn btn-primary btn-shop">
                   Shop Now <i className="fas fa-shopping-cart"></i>

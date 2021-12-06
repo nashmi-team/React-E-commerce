@@ -12,18 +12,18 @@ const Checkout = ({ history }) => {
   };
 
   return (
-    <div class="site-wrap">
-      <div class="bg-light py-3">
-        <div class="row test">
-          <div class="col-md-7 mb-5 mb-md-0">
-            <h2 class="h3 mb-3 text-black">Billing Details</h2>
+    <div className="site-wrap">
+      <div className="bg-light py-3">
+        <div className="row test">
+          <div className="col-md-7 mb-5 mb-md-0">
+            <h2 className="h3 mb-3 text-black">Billing Details</h2>
             <form>
-              <div class="p-3 p-lg-5 border">
-                <div class="form-group">
-                  <label for="c_city" class="text-black">
-                    City <span class="text-danger">*</span>
+              <div className="p-3 p-lg-5 border">
+                <div className="form-group">
+                  <label htmlFor="c_city" className="text-black">
+                    City <span className="text-danger">*</span>
                   </label>
-                  <select id="c_country" class="form-control" required>
+                  <select id="c_country" className="form-control" required>
                     <option value="">select your city</option>
                     <option value="amman">Amman</option>
                     <option value="zarqa">Zarqa</option>
@@ -35,26 +35,26 @@ const Checkout = ({ history }) => {
                     <option value="karak">Karak</option>
                   </select>
                 </div>
-                <div class="form-group row">
-                  <div class="col-md-6">
-                    <label for="c_fname" class="text-black">
-                      First Name <span class="text-danger">*</span>
+                <div className="form-group row">
+                  <div className="col-md-6">
+                    <label htmlFor="c_fname" className="text-black">
+                      First Name <span className="text-danger">*</span>
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="c_fname"
                       name="c_fname"
                       required
                     />
                   </div>
-                  <div class="col-md-6">
-                    <label for="c_lname" class="text-black">
-                      Last Name <span class="text-danger">*</span>
+                  <div className="col-md-6">
+                    <label htmlFor="c_lname" className="text-black">
+                      Last Name <span className="text-danger">*</span>
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="c_lname"
                       name="c_lname"
                       required
@@ -62,28 +62,28 @@ const Checkout = ({ history }) => {
                   </div>
                 </div>
 
-                <div class="form-group row">
-                  <div class="col-md-12">
-                    <label for="c_companyname" class="text-black">
+                <div className="form-group row">
+                  <div className="col-md-12">
+                    <label htmlFor="c_companyname" className="text-black">
                       Company Name
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="c_companyname"
                       name="c_companyname"
                     />
                   </div>
                 </div>
 
-                <div class="form-group row">
-                  <div class="col-md-12">
-                    <label for="c_address" class="text-black">
-                      Address <span class="text-danger">*</span>
+                <div className="form-group row">
+                  <div className="col-md-12">
+                    <label htmlFor="c_address" className="text-black">
+                      Address <span className="text-danger">*</span>
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="c_address"
                       name="c_address"
                       placeholder="Street address"
@@ -92,34 +92,34 @@ const Checkout = ({ history }) => {
                   </div>
                 </div>
 
-                <div class="form-group">
+                <div className="form-group">
                   <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     placeholder="Apartment, suite, unit etc. (optional)"
                   />
                 </div>
 
-                <div class="form-group row mb-5">
-                  <div class="col-md-6">
-                    <label for="c_email_address" class="text-black">
-                      Email Address <span class="text-danger">*</span>
+                <div className="form-group row mb-5">
+                  <div className="col-md-6">
+                    <label htmlFor="c_email_address" className="text-black">
+                      Email Address <span className="text-danger">*</span>
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="c_email_address"
                       name="c_email_address"
                       required
                     />
                   </div>
-                  <div class="col-md-6">
-                    <label for="c_phone" class="text-black">
-                      Phone <span class="text-danger">*</span>
+                  <div className="col-md-6">
+                    <label htmlFor="c_phone" className="text-black">
+                      Phone <span className="text-danger">*</span>
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="c_phone"
                       name="c_phone"
                       placeholder="Phone Number"
@@ -128,8 +128,8 @@ const Checkout = ({ history }) => {
                   </div>
                 </div>
 
-                <div class="form-group">
-                  <label for="c_order_notes" class="text-black">
+                <div className="form-group">
+                  <label htmlFor="c_order_notes" className="text-black">
                     Order Notes
                   </label>
                   <textarea
@@ -137,13 +137,13 @@ const Checkout = ({ history }) => {
                     id="c_order_notes"
                     cols="30"
                     rows="5"
-                    class="form-control"
+                    className="form-control"
                     placeholder="Write your notes here..."
                   ></textarea>
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                   <button
-                    class="btn btn-primary btn-lg py-3 btn-block"
+                    className="btn btn-primary btn-lg py-3 btn-block"
                     onSubmit={handleOrder}
                   >
                     Place Order

@@ -4,7 +4,14 @@
   top: 10px;
   font-size: 8px;
 }
+.quantity {
+  padding: 0.2em;
+}
 
+.cart-icon,
+.item {
+  color: #fff ;
+}
 #cart > span:last-child {
   position: absolute;
   right: 10px;
@@ -12,6 +19,17 @@
   color: darkblue;
   cursor: pointer;
   font-size: 125%;
+}
+.cart-icon {
+  color: white;
+  cursor: pointer;
+  font-size: 2rem !important;
+}
+.cart-icon:hover {
+  transform: scale(1.1);
+}
+.cart-counter {
+  color: white;
 }
 
 #cart:hover,
@@ -114,6 +132,7 @@ table {
   .product-name {
     font-size: 0.73em;
   }
+
   .table td {
     padding: 3%;
     vertical-align: middle;
@@ -121,10 +140,11 @@ table {
   .empty-cart {
     padding: 0.1rem;
   }
-  .quantitiy-cell {
+
+  /* .quantitiy-cell {
     display: flex;
     flex-direction: column-reverse;
-  }
+  } */
   .decrease,
   .increase {
     align-self: center;

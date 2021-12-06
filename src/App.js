@@ -15,22 +15,26 @@ import Slider from "./components/Slider/Slider";
 import Checkout from "./components/Checkout/Checkout";
 
 const App = () => {
-    // All State
-    const [userSignupInformation, setUserSignupInformation] = useState({
-        username: "", email: "", password: "", repeatPassword: "",
-    });
+  // All State
+  const [userSignupInformation, setUserSignupInformation] = useState({
+    username: "",
+    email: "",
+    password: "",
+    repeatPassword: "",
+  });
 
-    const [userLoginInformation, setUserLoginInformation] = useState({
-        loginEmail: "", loginPassword: "",
-    });
+  const [userLoginInformation, setUserLoginInformation] = useState({
+    loginEmail: "",
+    loginPassword: "",
+  });
 
-    const [submitted, setSubmitted] = useState(false);
-    const [logged, setLogged] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [logged, setLogged] = useState(false);
 
   return (
     <Router>
       <CartProvider>
-        <NavBar />
+        <NavBar logged={logged} setLogged={setLogged} />
         <Switch>
           <Route path="/registeration">
             <div className="register-style">
@@ -39,12 +43,16 @@ const App = () => {
                 userSignupInformation={userSignupInformation}
                 submitted={submitted}
                 setSubmitted={setSubmitted}
+                logged={logged}
+                setLogged={setLogged}
               />
               <Login
                 userLoginInformation={userLoginInformation}
                 setUserLoginInformation={setUserLoginInformation}
                 logged={logged}
                 setLogged={setLogged}
+                submitted={submitted}
+                setSubmitted={setSubmitted}
               />
             </div>
           </Route>

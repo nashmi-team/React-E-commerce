@@ -1,44 +1,69 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import { withRouter } from "react-router";
+import { useHistory } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 import "./cart.css";
-import {Table} from "react-bootstrap";
-import {useCart} from "react-use-cart";
+import { Table } from "react-bootstrap";
+import { useCart } from "react-use-cart";
 
 const Cart = () => {
-    const {
-        isEmpty, totalItems, cartTotal, updateItemQuantity, removeItem, emptyCart, items,
-    } = useCart();
+  const {
+    isEmpty,
+    totalItems,
+    cartTotal,
+    updateItemQuantity,
+    removeItem,
+    emptyCart,
+    items,
+  } = useCart();
 
-    const [show, setShow] = useState(false);
-    //test
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+  const history = useHistory();
 
-    return (<>
-        <div className="item">
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const handelCheckout = () => {
+    if (localStorage.getItem("user")) {
+      history.push({
+        pathname: `/checkout`,
+      });
+      setShow(false);
+    } else {
+      history.push({
+        pathname: `/registeration`,
+      });
+      setShow(false);
+    }
+  };
+  return (
+    <>
+      <div className="item">
         <span className="" id="item">
           {totalItems}
         </span>
-        </div>
-        <i onClick={handleShow} className="fas fa-cart-plus fa-2x "/>
+      </div>
+      <i onClick={handleShow} className="fas fa-cart-plus fa-2x cart-icon" />
 
-        <div>
-            <div id="cart">
+      <div>
+        <div id="cart">
           <span
-              className="glyphicon glyphicon-shopping-cart"
-              onClick={handleShow}
+            className="glyphicon glyphicon-shopping-cart"
+            onClick={handleShow}
           />
-            </div>
-            <Modal show={show} onHide={handleClose} className="">
-                <Modal.Header>
-                    <Modal.Title className="text-primary">Shopping Bag</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    {isEmpty ? (<h3>Your Cart is Empty</h3>) : (<Table striped bordered hover className="cart_table">
-                        <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Image</th>
+        </div>
+        <Modal show={show} onHide={handleClose} className="">
+          <Modal.Header>
+            <Modal.Title className="text-primary">Shopping Bag</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            {isEmpty ? (
+              <h3>Your Cart is Empty</h3>
+            ) : (
+              <Table striped bordered hover className="cart_table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Image</th>
 
                     <th>Price</th>
                     <th>Quantity</th>
@@ -107,6 +132,7 @@ const Cart = () => {
           <Modal.Footer>
             <button
               type="button"
+              onClick={handelCheckout}
               className={
                 isEmpty ? "btn btn-default" : "btn btn-default checkout_active"
               }
@@ -128,4 +154,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default withRouter(Cart);
