@@ -17,14 +17,13 @@ const Product = (props) => {
     <figure className="snip1268" data-aos="fade-up">
       <div className="image">
         <img src={props.src} alt={props.alt} />
-
         <button className="add-to-cart1" onClick={() => addItem(props.item)}>
           Add to Cart
         </button>
       </div>
       <figcaption className="card-content">
         <h2 className="title-desc">
-          <Link to={`/Product/${props.productName}`}>{props.productName}</Link>
+          <Link to={`/shop/${props.productName}`}>{props.productName}</Link>
         </h2>
         <div className="price">{props.price} JD</div>
       </figcaption>

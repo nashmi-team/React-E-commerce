@@ -13,6 +13,7 @@ import Footer from "./components/Footer/Footer";
 import SingleProduct from "./components/Shop/SingleProduc/SingleProduct";
 import Slider from "./components/Slider/Slider";
 import Checkout from "./components/Checkout/Checkout";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 const App = () => {
   // All State
@@ -35,6 +36,8 @@ const App = () => {
     <Router>
       <CartProvider>
         <NavBar logged={logged} setLogged={setLogged} />
+        <NavBar />
+        <ScrollToTop />
         <Switch>
           <Route path="/registeration">
             <div className="register-style">
@@ -59,13 +62,13 @@ const App = () => {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/shop">
+          <Route exact path="/shop">
             <Shop />
           </Route>
           <Route path="/dataWeather">
             <Profile logged={logged} setLogged={setLogged} />
           </Route>
-          <Route exact path="/product/:productName">
+          <Route exact path="/shop/:productName">
             <SingleProduct />
           </Route>
           <Route path="/slider">
@@ -76,6 +79,7 @@ const App = () => {
           </Route>
         </Switch>
       </CartProvider>
+
       <Footer />
     </Router>
   );
