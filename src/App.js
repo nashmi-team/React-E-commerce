@@ -12,6 +12,7 @@ import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import SingleProduct from "./components/Shop/SingleProduc/SingleProduct";
 import Slider from "./components/Slider/Slider";
+import OurTeam from "./components/OurTeam";
 
 const App = () => {
   // All State
@@ -65,6 +66,9 @@ const App = () => {
           </Route>
           <Route path="/slider">
             <Slider />
+          </Route>
+          <Route path="/our Team">
+            <OurTeam />
           </Route>
         </Switch>
       </CartProvider>

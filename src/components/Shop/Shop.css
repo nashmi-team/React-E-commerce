@@ -13,7 +13,7 @@ form {
   justify-content: flex-end;
   margin-top: 1rem;
 }
-input[type="submit"] {
+/* input[type="submit"] {
   border: none;
   background: orangered;
   color: white;
@@ -21,10 +21,11 @@ input[type="submit"] {
   border-radius: 3px;
   padding: 0 15px;
   cursor: pointer;
-}
+} */
 #rating-filter {
   color: white;
   padding: 5px;
+  width: 10%;
   background: orangered;
   border: none;
   cursor: pointer;

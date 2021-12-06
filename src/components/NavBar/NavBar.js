@@ -26,6 +26,10 @@ const Links = [
     name: "My Account",
     link: "/dataWeather",
   },
+  {
+    name: "Our Team",
+    link: "/our Team",
+  },
 ];
 
 const Navbar = () => {
@@ -57,10 +61,9 @@ const Navbar = () => {
             );
           })}
         </ul>
-
-      </div>
-      <div className=" ml-auto">
-        <Cart />
+        <div className="nav-item ml-auto">
+          <Cart />
+        </div>
       </div>
     </nav>
   );
