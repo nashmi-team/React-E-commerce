@@ -1,0 +1,59 @@
+.showProduct {
+  width: 80%;
+  margin: 1% auto;
+  display: grid;
+  gap: 2em;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: minmax(100px, 1fr);
+}
+
+form {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+input[type="submit"] {
+  border: none;
+  background: orangered;
+  color: white;
+  margin-left: 15px;
+  border-radius: 3px;
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+.breadCrump {
+  width: 80%;
+  margin: 1%;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.breadCrump:hover a {
+  text-decoration: none !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .showProduct {
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .showProduct {
+    grid-template-columns: repeat(1, 1fr);
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .showProduct {
+    grid-template-columns: repeat(1, 1fr);
+    width: 70%;
+    margin: 0;
+  }
+}

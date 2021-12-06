@@ -1,0 +1,14 @@
+.scrollTopBtn {
+  bottom: 0;
+  right: 20px;
+  font-size: 30px;
+  float: right;
+  color: #007bff;
+  cursor: pointer;
+  position: fixed;
+  z-index: 9999;
+}
+
+.scrollTopBtn>i {
+  font-size: 2rem;
+}

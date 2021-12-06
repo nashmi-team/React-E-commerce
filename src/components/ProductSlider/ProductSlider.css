@@ -1,0 +1,32 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+  align-items: center;
+  padding: 1rem;
+}
+
+.slider>img {
+  width: 50%;
+}
+
+.sliderbtn {
+  font-size: 1rem;
+  padding: 1%;
+  width: 35%;
+  margin-bottom: 5%;
+}
+
+.title-section span {
+  color: #000;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.title-section h2 {
+  font-family: var(--font-family);
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}

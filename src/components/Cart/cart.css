@@ -1,0 +1,171 @@
+#cart>span:first-child {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 8px;
+}
+
+.quantity {
+  padding: 0.2em;
+}
+
+.cart-icon,
+.item {
+  color: #fff;
+}
+
+#cart>span:last-child {
+  position: absolute;
+  right: 10px;
+  top: 17px;
+  color: darkblue;
+  cursor: pointer;
+  font-size: 125%;
+}
+
+.cart-icon {
+  color: white;
+  cursor: pointer;
+  font-size: 2rem !important;
+}
+
+.cart-icon:hover {
+  transform: scale(1.1);
+}
+
+.cart-counter {
+  color: white;
+}
+
+#cart:hover,
+#cart:focus {
+  font-weight: bold;
+}
+
+.product_img>img {
+  width: 100%;
+}
+
+.crystal>* {
+  display: inline-block;
+  padding: 5px;
+}
+
+li a,
+a.back {
+  display: block !important;
+  padding: 10px;
+}
+
+.size-crystals {
+  width: 100px;
+  height: 100px;
+}
+
+span.glyphicon {
+  vertical-align: text-top;
+}
+
+.thumbnail>img {
+  height: 150px;
+}
+
+#cart-item {
+  padding-left: 0;
+}
+
+#cart-item li {
+  list-style-type: none;
+  position: relative;
+}
+
+#cart-item li>* {
+  display: inline-block;
+  padding: 10px;
+}
+
+#cart-item li img {
+  height: 100px;
+  width: 100px;
+}
+
+.del-crystal {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 45%;
+}
+
+.del-crystal:hover {
+  color: red;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+
+table {
+  table-layout: fixed;
+  font-size: 0.75em;
+  text-align: center;
+}
+
+.table td {
+  padding: 5%;
+  vertical-align: middle;
+}
+
+.fas {
+  font-size: 1.5rem;
+}
+
+.decrease,
+.increase {
+  padding: 0%;
+  width: 1rem;
+}
+
+.remove {
+  font-size: 0.7em;
+  text-align: center;
+}
+
+.checkout_active {
+  background-color: green;
+  color: white;
+}
+
+@media (max-width: 450px) {
+  .product-name {
+    font-size: 0.73em;
+  }
+
+  .table td {
+    padding: 3%;
+    vertical-align: middle;
+  }
+
+  .empty-cart {
+    padding: 0.1rem;
+  }
+
+  .decrease,
+  .increase {
+    align-self: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .table td {
+    padding: 3%;
+    vertical-align: middle;
+  }
+
+  .item {
+    justify-content: flex-start;
+    padding: 10px;
+  }
+}
