@@ -37,25 +37,32 @@ function Slider(props) {
         <OwlCarousel items={4} {...options} className="owl-theme container" loop>
 
             {data.map((data, index) => {
-                return (<div className="">
-                        <div key={index} className="product-card">
-                            <div className="badge">Hot</div>
-                            <div className="product-tumb">
-                                <img src={data.img} alt={data.alt}/>
-                            </div>
-                        </div>
-                        <div className="product-details">
-                            <h4><a href="">{data.name}</a></h4>
-                            <div className="product-bottom-details">
-                                <div className="product-price"><small>$96.00</small>{data.price}JD</div>
-                                <div className="product-links">
-                                    <i className="fas fa-cart-plus fa-2x" onClick={() => addItem(data)}/>
-                                </div>
-                            </div>
-                        </div>
-
+                return (
+                  <div className="" key={index}>
+                    <div className="product-card">
+                      <div className="badge">Hot</div>
+                      <div className="product-tumb">
+                        <img src={data.img} alt={data.alt} />
+                      </div>
                     </div>
-
+                    <div className="product-details">
+                      <h4>
+                        <a href="">{data.name}</a>
+                      </h4>
+                      <div className="product-bottom-details">
+                        <div className="product-price">
+                          <small>$96.00</small>
+                          {data.price}JD
+                        </div>
+                        <div className="product-links">
+                          <i
+                            className="fas fa-cart-plus fa-2x"
+                            onClick={() => addItem(data)}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 );
             })}
         </OwlCarousel>
