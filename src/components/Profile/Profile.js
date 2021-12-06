@@ -1,9 +1,9 @@
 import "./Profile.css";
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import Api from "./Api";
 
 const Profile = () => {
-    let userData;
+  let userData;
 
   if (!localStorage.getItem("user")) alert("Please Login");
   else {
