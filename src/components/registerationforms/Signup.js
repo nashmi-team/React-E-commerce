@@ -1,6 +1,6 @@
 import React from "react";
 import "./registeration.css";
-import { withRouter } from "react-router";
+import { withRouter } from "react-router-dom";
 
 function Signup({
   userSignupInformation,
@@ -65,7 +65,7 @@ function Signup({
     <div className="big-form">
       <form className="form-container" onSubmit={handleSubmit}>
         <fieldset>
-          <legend>Registeration</legend>
+          <legend>Registration</legend>
           <label htmlFor="username">
             username
             <input
@@ -95,7 +95,7 @@ function Signup({
           {userSignupInformation.email === "" ? (
             <span style={{ color: "red" }}>please enter your email </span>
           ) : null}
-          <label htmlFor="passowrd">
+          <label htmlFor="password">
             Password
             <input
               className="registretion-input"

@@ -34,11 +34,11 @@
 _daily record: >>>> guide line >>>> 1.0.2 >>>>> 1 ---> major, 0 ---> minar, 2 ---> patch (bug fix)_
 
 | Version | Updates                                      |
-| ------- | -------------------------------------------- |
+| ------- |----------------------------------------------|
 | 1.0.0   | first stage of documentation                 |
 | 1.1.0   | second stage of documentation                |
 | 2.0.0   | create Component functionality for all pages |
-| 2.1.0   | fix pugs                                     |
+| 2.1.0   | fix bugs                                     |
 | 2.1.1   | create CSS styles for all pages              |
 | 2.2.0   | stretch goals                                |
 | 2.1.2   | adding some styles                           |

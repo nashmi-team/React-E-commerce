@@ -88,7 +88,8 @@
 .reviews-section {
   padding: 60px 0;
   margin-bottom: 4rem;
-  background-color: #d5f3fff0;
+  background: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .slide {
