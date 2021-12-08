@@ -7,7 +7,7 @@ const OurTeam = () => {
       <div className="Ourteam-section">
         <div className="person">
           <img
-            src="./assest/imgs/farah.jpg"
+            src="../../assets/farah.jpg"
             alt="Farah"
             className="img-person"
           />
@@ -18,7 +18,7 @@ const OurTeam = () => {
         </div>
         <div className="person">
           <img
-            src="./assest/imgs/Abdelkareem.jpg"
+            src="../../assets/Abdelkareem.jpg"
             alt="Abdelkareem"
             className="img-person"
           />
@@ -29,7 +29,7 @@ const OurTeam = () => {
         </div>
         <div className="person">
           <img
-            src="./assest/imgs/Tharaa.jpg"
+            src="../../assets/Tharaa.jpg"
             alt="Tharaa"
             className="img-person"
           />
@@ -40,7 +40,7 @@ const OurTeam = () => {
         </div>
         <div className="person">
           <img
-            src="./assest/imgs/Ahmad.jpg"
+            src="../../assets/Ahmad.jpg"
             alt="Ahmad"
             className="img-person"
           />
@@ -51,7 +51,7 @@ const OurTeam = () => {
         </div>
         <div className="person">
           <img
-            src="./assest/imgs/Bisher.jpg"
+            src="../../assets/Bisher.jpg"
             alt="Bisher"
             className="img-person"
           />

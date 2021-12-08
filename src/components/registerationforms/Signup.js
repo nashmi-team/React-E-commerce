@@ -1,6 +1,6 @@
 import React from "react";
 import "./registeration.css";
-import { withRouter } from "react-router";
+import { withRouter } from "react-router-dom";
 
 function Signup({
   userSignupInformation,
