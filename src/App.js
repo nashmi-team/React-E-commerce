@@ -32,6 +32,8 @@ const App = () => {
   const [submitted, setSubmitted] = useState(false);
   const [logged, setLogged] = useState(false);
 
+  const [checkOrdered, setCheckOrdered] = useState(false);
+
   return (
     <Router>
       <CartProvider>
@@ -64,8 +66,12 @@ const App = () => {
           <Route exact path="/shop">
             <Shop />
           </Route>
-          <Route path="/dataWeather">
-            <Profile logged={logged} setLogged={setLogged} />
+          <Route path="/profile">
+            <Profile
+              checkOrdered={checkOrdered}
+              logged={logged}
+              setLogged={setLogged}
+            />
           </Route>
           <Route exact path="/shop/:productName">
             <SingleProduct />
@@ -74,7 +80,7 @@ const App = () => {
             <Slider />
           </Route>
           <Route path="/checkout">
-            <Checkout />
+            <Checkout setCheckOrdered={setCheckOrdered} />
           </Route>
           <Route path="/our-team">
             <OurTeam />
