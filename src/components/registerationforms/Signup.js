@@ -65,7 +65,7 @@ function Signup({
     <div className="big-form">
       <form className="form-container" onSubmit={handleSubmit}>
         <fieldset>
-          <legend>Registeration</legend>
+          <legend>Registration</legend>
           <label htmlFor="username">
             username
             <input
@@ -114,7 +114,7 @@ function Signup({
             <span style={{ color: "red" }}>Please enter your password</span>
           ) : null}
           <label htmlFor="r.password">
-            Reapeat-password
+            Repeat-password
             <input
               className="registretion-input"
               id="4"
