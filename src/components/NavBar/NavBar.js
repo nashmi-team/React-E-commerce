@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/Logo.png";
+// import  from "../../../public/assets/Logo.png";
 import "./NavBar.css";
 import Cart from "../Cart/Cart";
 import { useCart } from "react-use-cart";
@@ -29,7 +29,7 @@ const Navbar = ({ logged, setLogged }) => {
       <img
         className="navbar-brand ml-3"
         id="logo_custom"
-        src={logo}
+        src="../../assets/Logo.png"
         alt="logo"
       />
       <button

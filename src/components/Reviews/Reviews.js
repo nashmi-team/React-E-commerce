@@ -6,14 +6,14 @@ const reviews = [
     id: 1,
     name: "Beethoven",
     text: "What a great piece of music!",
-    imgSrc: "../assest/1.jpg",
+    imgSrc: "../../assets/1.jpg",
     position: "Composer pianist",
   },
   {
     id: 2,
     name: "Wolfgang Amadeus Mozart",
     text: "Such a nice company",
-    imgSrc: "../assest/Elon.jpg",
+    imgSrc: "../../assets/Elon.jpg",
     position: "Composer",
   },
 ];
