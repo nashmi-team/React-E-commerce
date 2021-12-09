@@ -25,15 +25,15 @@ function Login({
       : [];
 
     const checkUser = loginUpdatedData.filter(
-      (c) =>
-        c.email === userLoginInformation.loginEmail &&
-        c.password === userLoginInformation.loginPassword
+      (acc) =>
+        acc.email === userLoginInformation.loginEmail &&
+        acc.password === userLoginInformation.loginPassword
     );
 
     const check = checkUser.some(
-      (c) =>
-        c.email === userLoginInformation.loginEmail &&
-        c.password === userLoginInformation.loginPassword
+      (acc) =>
+        acc.email === userLoginInformation.loginEmail &&
+        acc.password === userLoginInformation.loginPassword
     );
 
     if (check) {
@@ -41,6 +41,7 @@ function Login({
         pathname: `/shop`,
       });
       setLogged(true);
+
       sessionStorage.setItem(
         "loggedAccount",
         JSON.stringify({

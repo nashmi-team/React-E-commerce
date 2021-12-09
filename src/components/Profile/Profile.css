@@ -39,7 +39,7 @@ li {
 }
 
 .table {
-  margin-bottom: 0;
+  margin-bottom: 5em;
   border-collapse: collapse;
   border-radius: 10%;
 }
@@ -107,7 +107,7 @@ tr .td {
 }
 
 td img {
-  width: 6em;
+  width: 5em;
 }
 
 @media all and (max-width: 270px) {

@@ -1,11 +1,11 @@
 .register-style {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin: 0% auto;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1000px) {
   .register-style {
     display: flex;
     flex-direction: column;

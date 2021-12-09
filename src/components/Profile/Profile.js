@@ -9,16 +9,15 @@ const Profile = ({ checkOrdered }) => {
   const currentOrder = JSON.parse(localStorage.getItem("current-order"));
 
   const renderTableData = () => {
-    const style = { padding: "2%" };
     let total = 0;
 
     return currentOrder.map((item, index) => {
       total = 0;
       return (
         <>
-          <table className="table" id="table" style={{ borderRadius: "50%" }}>
+          <table className="table table-bordered" id="table">
             <thead>
-              <tr>
+              <tr key={index}>
                 <th>ID</th>
                 <th>Image</th>
                 <th>Product</th>
@@ -27,28 +26,38 @@ const Profile = ({ checkOrdered }) => {
               </tr>
             </thead>
 
-            {item.map((order) => {
+            {item.map((order, index) => {
               const { id, img, alt, name, quantity, price } = order;
               total += price;
               return (
                 <tbody>
                   <tr key={index}>
-                    <td style={style}>{id}</td>
-                    <td style={style}>
+                    <td>{id}</td>
+                    <td>
                       <img src={img} alt={alt} />
                     </td>
-                    <td style={style}>{name}</td>
-                    <td style={style}>{quantity}</td>
-                    <td style={style}>{price} JD</td>
+                    <td>{name}</td>
+                    <td>{quantity}</td>
+                    <td>{price} JD</td>
                   </tr>
                 </tbody>
               );
             })}
+            <tfoot>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <h6 style={{ float: "right", fontWeight: "900" }}>
+                    Total:
+                    <strong>{checkOrdered ? `${+total}JD` : null} </strong>
+                  </h6>
+                </td>
+              </tr>
+            </tfoot>
           </table>
-          <h4 style={{ float: "right", fontWeight: "bolder" }}>
-            Total:
-            <strong>{checkOrdered ? `${+total}JD` : null} </strong>
-          </h4>
         </>
       );
     });
