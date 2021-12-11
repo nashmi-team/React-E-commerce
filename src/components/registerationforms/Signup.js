@@ -65,7 +65,7 @@ function Signup({
     <div className="big-form">
       <form className="form-container" onSubmit={handleSubmit}>
         <fieldset>
-          <legend>Registeration</legend>
+          <legend>SignUp</legend>
           <label htmlFor="username">
             username
             <input
