@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import "./youtube.css";
 
-const API = "AIzaSyAU8ovagkqbwSjAWLCqMeCbtUQ9iJEe9qc";
+const API = "AIzaSyDIIxAoo1kzmw0N4kXr8srjX6S6ElNW9bY";
 const channelId = "UCCejg-zx3R3OXFItvJxVvoA";
 const maxResults = 1;
 const finalUrl = `https://www.googleapis.com/youtube/v3/search?key=${API}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxResults}`;

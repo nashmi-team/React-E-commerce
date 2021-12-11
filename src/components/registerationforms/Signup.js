@@ -1,6 +1,6 @@
 import React from "react";
 import "./registeration.css";
-import { withRouter } from "react-router";
+import { withRouter } from "react-router-dom";
 
 function Signup({
   userSignupInformation,
@@ -65,7 +65,11 @@ function Signup({
     <div className="big-form">
       <form className="form-container" onSubmit={handleSubmit}>
         <fieldset>
+<<<<<<< HEAD
           <legend>SignUp</legend>
+=======
+          <legend>Registration</legend>
+>>>>>>> cabe05a1227b92586c15930cfa65fd955b329483
           <label htmlFor="username">
             username
             <input
@@ -114,7 +118,7 @@ function Signup({
             <span style={{ color: "red" }}>Please enter your password</span>
           ) : null}
           <label htmlFor="r.password">
-            Reapeat-password
+            Repeat-password
             <input
               className="registretion-input"
               id="4"

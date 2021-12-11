@@ -1,5 +1,5 @@
 import { useCart } from "react-use-cart";
-import { withRouter } from "react-router";
+import { withRouter } from "react-router-dom";
 import { Link } from "react-router-dom";
 import data from "../Data";
 

@@ -1,29 +1,64 @@
 import "./Profile.css";
 import Api from "./Api";
 
-const Profile = () => {
+const Profile = ({ checkOrdered }) => {
   let userData = JSON.parse(sessionStorage.getItem("loggedAccount"));
 
   const { email, username } = userData;
 
-  const localData = JSON.parse(localStorage.getItem("react-use-cart"));
-  const { items } = localData;
-  const { cartTotal } = localData;
+  const currentOrder = JSON.parse(localStorage.getItem("current-order"));
 
   const renderTableData = () => {
-    const style = { padding: "2%" };
-    return items.map((item) => {
-      const { id, img, alt, name, quantity, price } = item;
+    let total = 0;
+
+    return currentOrder.map((item, index) => {
+      total = 0;
       return (
-        <tr key={id}>
-          <td style={style}>{id}</td>
-          <td style={style}>
-            <img src={img} alt={alt} />
-          </td>
-          <td style={style}>{name}</td>
-          <td style={style}>{quantity}</td>
-          <td style={style}>{price} JD</td>
-        </tr>
+        <>
+          <table className="table table-bordered" id="table">
+            <thead>
+              <tr key={index}>
+                <th>ID</th>
+                <th>Image</th>
+                <th>Product</th>
+                <th>quantity</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+
+            {item.map((order, index) => {
+              const { id, img, alt, name, quantity, price } = order;
+              total += price;
+              return (
+                <tbody>
+                  <tr key={index}>
+                    <td>{id}</td>
+                    <td>
+                      <img src={img} alt={alt} />
+                    </td>
+                    <td>{name}</td>
+                    <td>{quantity}</td>
+                    <td>{price} JD</td>
+                  </tr>
+                </tbody>
+              );
+            })}
+            <tfoot>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <h6 style={{ float: "right", fontWeight: "900" }}>
+                    Total:
+                    <strong>{checkOrdered ? `${+total}JD` : null} </strong>
+                  </h6>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </>
       );
     });
   };
@@ -43,21 +78,14 @@ const Profile = () => {
         <div className="container">
           <h3>Your Orders</h3>
           <p>This table contains your all orders:</p>
-          <table className="table" id="table">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Image</th>
-                <th>Product</th>
-                <th>quantity</th>
-                <th>Price</th>
-              </tr>
-            </thead>
-            <tbody>{renderTableData()}</tbody>
-          </table>
-          <h4 style={{ float: "right", fontWeight: "bolder" }}>
-            Total: <strong>{cartTotal} JD</strong>
-          </h4>
+
+          {checkOrdered ? (
+            renderTableData()
+          ) : (
+            <>
+              <h1 className="orderName">You have no order Yet!</h1>
+            </>
+          )}
         </div>
       </div>
     </>

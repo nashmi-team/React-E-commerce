@@ -1,5 +1,5 @@
 import React from "react";
-import { withRouter } from "react-router";
+import { withRouter } from "react-router-dom";
 import "./registeration.css";
 
 function Login({
@@ -19,28 +19,21 @@ function Login({
   const handleLoginSubmit = (e) => {
     e.preventDefault();
 
-    const { loginEmail, loginPassword } = e.target;
-
-    let loginData = {
-      loginEmail: loginEmail.value,
-      loginPassword: loginPassword.value,
-    };
-
     let loginUpdatedData = [];
     loginUpdatedData = JSON.parse(localStorage.getItem("user"))
       ? JSON.parse(localStorage.getItem("user"))
       : [];
 
     const checkUser = loginUpdatedData.filter(
-      (c) =>
-        c.email === userLoginInformation.loginEmail &&
-        c.password === userLoginInformation.loginPassword
+      (acc) =>
+        acc.email === userLoginInformation.loginEmail &&
+        acc.password === userLoginInformation.loginPassword
     );
 
     const check = checkUser.some(
-      (c) =>
-        c.email === userLoginInformation.loginEmail &&
-        c.password === userLoginInformation.loginPassword
+      (acc) =>
+        acc.email === userLoginInformation.loginEmail &&
+        acc.password === userLoginInformation.loginPassword
     );
 
     if (check) {
@@ -48,6 +41,7 @@ function Login({
         pathname: `/shop`,
       });
       setLogged(true);
+
       sessionStorage.setItem(
         "loggedAccount",
         JSON.stringify({

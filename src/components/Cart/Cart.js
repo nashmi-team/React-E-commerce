@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { withRouter } from "react-router";
+import { withRouter } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 import "./cart.css";

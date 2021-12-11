@@ -38,6 +38,35 @@ li {
   font-size: 1.1em;
 }
 
+.table {
+  margin-bottom: 5em;
+  border-collapse: collapse;
+  border-radius: 10%;
+}
+
+thead {
+  background-color: black;
+  color: #fefefe;
+}
+
+tr,
+td {
+  border: solid 1px #777;
+}
+
+.orderName {
+  margin: 0 auto;
+  background-color: #f1f1f1;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+h4 {
+  margin: 0.5em 0 2em 0;
+}
+
 .city {
   font-size: 1.2em;
 }
@@ -60,7 +89,7 @@ sup {
 .holder {
   display: flex;
   flex-direction: column;
-  margin: 1em 1em;
+  margin: 1.9em 1em;
 }
 
 .holder-info {
@@ -78,7 +107,7 @@ tr .td {
 }
 
 td img {
-  width: 6em;
+  width: 5em;
 }
 
 @media all and (max-width: 270px) {
