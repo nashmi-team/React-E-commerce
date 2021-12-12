@@ -1,12 +1,33 @@
 import "./Checkout.css";
 import React from "react";
 import { withRouter } from "react-router-dom";
+import { useCart } from "react-use-cart";
 
-const Checkout = ({ history }) => {
+
+const Checkout = ({ history, setCheckOrdered }) => {
+  const { emptyCart } = useCart();
   const handleOrder = (event) => {
     event.preventDefault();
+    setCheckOrdered(true);
+
+    const localData = JSON.parse(localStorage.getItem("react-use-cart"));
+    const { items } = localData;
+
+    const orders = [];
+
+    orders.push(items);
+
+    if (!localStorage.getItem("current-order")) {
+      localStorage.setItem("current-order", JSON.stringify(orders));
+    } else {
+      let newOrders = JSON.parse(localStorage.getItem("current-order"));
+      orders.push(...newOrders);
+      localStorage.setItem("current-order", JSON.stringify(orders));
+    }
+
+    emptyCart(items);
     history.push({
-      pathname: `/`,
+      pathname: `/profile`,
     });
   };
 
@@ -18,7 +39,7 @@ const Checkout = ({ history }) => {
             <div className="h3 mb-3 text-black" style={{ textAlign: "center" }}>
               Billing Details
             </div>
-            <form>
+            <form onSubmit={handleOrder}>
               <div className="p-3 p-lg-5 border">
                 <div className="form-group">
                   <label htmlFor="c_city" className="text-black">
@@ -143,10 +164,7 @@ const Checkout = ({ history }) => {
                   ></textarea>
                 </div>
                 <div className="form-group">
-                  <button
-                    className="btn btn-primary btn-lg py-3 btn-block"
-                    onSubmit={handleOrder}
-                  >
+                  <button className="btn btn-primary btn-lg py-3 btn-block">
                     Place Order
                   </button>
                 </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/Logo.png";
 import "./NavBar.css";
 import Cart from "../Cart/Cart";
 import { useCart } from "react-use-cart";
@@ -25,11 +24,11 @@ const Navbar = ({ logged, setLogged }) => {
   };
 
   return (
-    <nav className="navbar navbar-expand-md bg-dark">
+    <nav className="navbar navbar-expand-md custom-navbar">
       <img
         className="navbar-brand ml-3"
         id="logo_custom"
-        src={logo}
+        src="../../assets/Logo.png"
         alt="logo"
       />
       <button
@@ -53,7 +52,7 @@ const Navbar = ({ logged, setLogged }) => {
           })}
           <li className="nav-item">
             {logged ? (
-              <Link className="nav-link" to="/dataWeather">
+              <Link className="nav-link" to="/profile">
                 My Account
               </Link>
             ) : null}

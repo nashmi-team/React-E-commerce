@@ -5,6 +5,7 @@ import { useCart } from "react-use-cart";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
+import { Link } from "react-router-dom";
 
 function Slider(props) {
   //options for slider owl
@@ -52,7 +53,7 @@ function Slider(props) {
               </div>
               <div className="product-details">
                 <h4>
-                  <a href="/">{data.name}</a>
+                  <Link to={`/shop/${data.name}`}>{data.name}</Link>
                 </h4>
                 <div className="product-bottom-details">
                   <div className="product-price">
