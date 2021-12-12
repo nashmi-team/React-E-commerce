@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 import Cart from "../Cart/Cart";
@@ -22,15 +22,25 @@ const Navbar = ({ logged, setLogged }) => {
     setLogged(false);
     emptyCart(items);
   };
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+    useEffect(() => {
+        window.addEventListener("resize", () => {
+            const ismobile = window.innerWidth < 768;
+            if (ismobile !== isMobile) setIsMobile(ismobile);
+        }, false);
+    }, [isMobile]);
 
   return (
-    <nav className="navbar navbar-expand-md custom-navbar">
-      <img
-        className="navbar-brand ml-3"
-        id="logo_custom"
-        src="../../assets/Logo.png"
-        alt="logo"
-      />
+    <nav className="navbar navbar-expand-md custom-navbar fixed-top">
+     <Link to="/" className="navbar-brand">
+         <img
+             className="navbar-brand ml-3"
+             id="logo_custom"
+             src="../../assets/Logo.png"
+             alt="logo"
+         />
+     </Link>
       <button
         className="navbar-toggler navbar-toggler-right  "
         type="button"
@@ -39,8 +49,9 @@ const Navbar = ({ logged, setLogged }) => {
       >
         <i className="fa-solid fa-bars"></i>
       </button>
-      <div className="collapse navbar-collapse " id="collapsibleNavbar">
-        <ul className="navbar-nav">
+      <div className={`${isMobile ? "collapse navbar-collapse" : "collapse navbar-collapse center-collapse "}`}  id="collapsibleNavbar">
+          {/*`${isMobile ? "collapse navbar-collapse" : "collapse navbar-collapse center-collapse"}`*/}
+        <ul className="navbar-nav ">
           {Links.map((link, index) => {
             return (
               <li className="nav-item" key={index}>

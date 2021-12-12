@@ -9,12 +9,12 @@
 }
 
 .btn-shop {
-  background-color: #0000ff !important;
+  background-color: #007bff !important;
   color: #fff;
   border-radius: 10px;
   border: none;
   padding: 0.9em 4em;
-  font-size: 14px;
+  /*font-size: 14px;*/
   font-weight: bold;
   transition: all 0.3s ease-in-out;
   cursor: pointer;

@@ -6,6 +6,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 function Slider(props) {
   //options for slider owl
@@ -17,6 +18,10 @@ function Slider(props) {
     autoplayTimeout: 3000,
     autoplayHoverPause: true,
     dots: false,
+    // slideTransition:"smooth",
+    smartSpeed: 1500,
+    animateIn: 'linear',
+    animateOut: 'linear',
     navText: [
       "<i class='fa fa-angle-left'></i>",
       "<i class='fa fa-angle-right'></i>",
@@ -35,6 +40,18 @@ function Slider(props) {
   };
 
   const { addItem } = useCart();
+
+  const handleAddToCart = (product) => {
+    addItem(product);
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Your item has been added to cart',
+      showConfirmButton: false,
+      timer: 1200
+    })
+
+  };
 
   return (
     <>
@@ -60,7 +77,7 @@ function Slider(props) {
                     {data.price}JD
                     <i
                       className="fas fa-cart-plus fa-2x addcart-icon"
-                      onClick={() => addItem(data)}
+                      onClick={() => handleAddToCart(data)}
                     />
                   </div>
                 </div>

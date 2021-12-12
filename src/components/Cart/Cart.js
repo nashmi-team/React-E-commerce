@@ -5,6 +5,7 @@ import Modal from "react-bootstrap/Modal";
 import "./cart.css";
 import { Table } from "react-bootstrap";
 import { useCart } from "react-use-cart";
+import Swal from "sweetalert2";
 
 const Cart = ({ logged }) => {
   const {
@@ -22,6 +23,50 @@ const Cart = ({ logged }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const handleRemove = (item) => {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        removeItem(item);
+        Swal.fire(
+            'Deleted!',
+            'Your item has been deleted.',
+            'success'
+        )
+      }
+    })
+  };
+
+  const handleClearCart = (items) => {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        emptyCart(items);
+        Swal.fire(
+            'Deleted!',
+            'Your cart has been deleted.',
+            'success'
+        )
+      }
+    })
+  };
+
+
   const handelCheckout = () => {
     if (logged) {
       history.push({
@@ -51,7 +96,7 @@ const Cart = ({ logged }) => {
             onClick={handleShow}
           />
         </div>
-        <Modal show={show} onHide={handleClose} className="">
+        <Modal show={show} onHide={handleClose} className="" size="lg">
           <Modal.Header>
             <Modal.Title className="text-primary">Shopping Bag</Modal.Title>
           </Modal.Header>
@@ -93,7 +138,7 @@ const Cart = ({ logged }) => {
                           </button>
                           <b className="quantity">{item.quantity}</b>
                           <button
-                            className="btn btn-success increase"
+                            className="btn btn-primary increase"
                             onClick={() =>
                               updateItemQuantity(item.id, item.quantity + 1)
                             }
@@ -104,7 +149,7 @@ const Cart = ({ logged }) => {
                         <td>
                           <button
                             className="btn btn-danger remove"
-                            onClick={() => removeItem(item.id)}
+                            onClick={() => handleRemove(item.id)}
                           >
                             <i className="far fa-trash-alt " />
                           </button>
@@ -114,12 +159,12 @@ const Cart = ({ logged }) => {
                   })}
                   <tr>
                     <td colSpan="3">
-                      <h4>Total: {cartTotal} JD</h4>
+                     <span className="total-td">Total: {cartTotal} JD</span>
                     </td>
                     <td colSpan="2">
                       <button
                         className="btn btn-danger empty-cart"
-                        onClick={() => emptyCart(items)}
+                        onClick={() => handleClearCart(items)}
                       >
                         Clear Cart
                       </button>
@@ -134,9 +179,9 @@ const Cart = ({ logged }) => {
               type="button"
               onClick={handelCheckout}
               className={
-                isEmpty ? "btn btn-default" : "btn btn-default checkout_active"
+                isEmpty ? "btn btn-default" : "btn btn-primary "
               }
-              disabled={isEmpty ? true : false}
+              disabled={isEmpty}
             >
               CHECKOUT
             </button>

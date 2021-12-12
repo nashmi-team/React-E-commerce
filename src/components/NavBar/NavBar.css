@@ -1,5 +1,6 @@
 .custom-navbar {
   background-color: black !important;
+  position: sticky;
 }
 
 .nav-link {
@@ -35,3 +36,9 @@
 .nav-item {
   font-size: 1.2rem;
 }
+
+.center-collapse {
+  display:flex  !important;
+  justify-content:center !important;
+}
+
