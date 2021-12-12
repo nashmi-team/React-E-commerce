@@ -15,13 +15,17 @@ function Slider(props) {
     nav: true,
     rewind: true,
     autoplay: true,
-    autoplayTimeout: 3000,
+
+    // autoplayTimeout: 3000,
     autoplayHoverPause: true,
     dots: false,
     // slideTransition:"smooth",
     smartSpeed: 1500,
-    animateIn: 'linear',
-    animateOut: 'linear',
+    center: true,
+    responsiveClass: true,
+
+    // animateIn: 'linear',
+    // animateOut: 'linear',
     navText: [
       "<i class='fa fa-angle-left'></i>",
       "<i class='fa fa-angle-right'></i>",
@@ -29,6 +33,9 @@ function Slider(props) {
     responsive: {
       0: {
         items: 1,
+        stagePadding:25,
+        margin: 10,
+
       },
       600: {
         items: 2,

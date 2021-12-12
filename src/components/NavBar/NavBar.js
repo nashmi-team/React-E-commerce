@@ -32,7 +32,7 @@ const Navbar = ({ logged, setLogged }) => {
     }, [isMobile]);
 
   return (
-    <nav className="navbar navbar-expand-md custom-navbar fixed-top">
+    <nav className="navbar navbar-expand-md custom-navbar fixed-top ">
      <Link to="/" className="navbar-brand">
          <img
              className="navbar-brand ml-3"
@@ -46,11 +46,11 @@ const Navbar = ({ logged, setLogged }) => {
         type="button"
         data-toggle="collapse"
         data-target="#collapsibleNavbar"
+        aria-expanded="false" aria-label="Toggle navigation"
       >
         <i className="fa-solid fa-bars"></i>
       </button>
       <div className={`${isMobile ? "collapse navbar-collapse" : "collapse navbar-collapse center-collapse "}`}  id="collapsibleNavbar">
-          {/*`${isMobile ? "collapse navbar-collapse" : "collapse navbar-collapse center-collapse"}`*/}
         <ul className="navbar-nav ">
           {Links.map((link, index) => {
             return (
