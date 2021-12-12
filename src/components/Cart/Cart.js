@@ -51,7 +51,9 @@ const Cart = ({ logged }) => {
             onClick={handleShow}
           />
         </div>
-        <Modal show={show} onHide={handleClose} className="">
+        <Modal
+            size="lg"
+            show={show} onHide={handleClose} className="">
           <Modal.Header>
             <Modal.Title className="text-primary">Shopping Bag</Modal.Title>
           </Modal.Header>
