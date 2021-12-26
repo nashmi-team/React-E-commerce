@@ -1,29 +1,20 @@
 import "./App.css";
-<<<<<<< HEAD
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import React, { useState } from "react";
 import { CartProvider } from "react-use-cart";
 import Profile from "./components/Profile/Profile";
 import Shop from "./components/Shop/Shop";
-=======
-import React, { useState } from "react";
-
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
->>>>>>> 384c6a77d3b20543c0945b40c0281f7abd95fd84
 import Home from "./components/Home/Home";
 import Signup from "./components/registerationforms/Signup";
 import Login from "./components/registerationforms/Login";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
-<<<<<<< HEAD
 import SingleProduct from "./components/Shop/SingleProduc/SingleProduct";
 import Slider from "./components/Slider/Slider";
 import Checkout from "./components/Checkout/Checkout";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import OurTeam from "./components/OurTeam/OurTeam";
 
-=======
->>>>>>> 384c6a77d3b20543c0945b40c0281f7abd95fd84
 const App = () => {
   // All State
   const [userSignupInformation, setUserSignupInformation] = useState({
