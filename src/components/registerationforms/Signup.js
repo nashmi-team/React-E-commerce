@@ -60,7 +60,6 @@ function Signup({
       setLogged(true);
     }
   };
-
   return (
     <div className="big-form">
       <form className="form-container" onSubmit={handleSubmit}>
